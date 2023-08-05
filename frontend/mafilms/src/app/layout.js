@@ -1,7 +1,7 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Martel_Sans } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Martel_Sans({ weight: ['200'], subsets: ['latin'] })
 
 export const metadata = {
   title: 'MA Films',
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   )
 }
