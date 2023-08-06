@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Martel_Sans } from "next/font/google";
+import { Gruppo } from "next/font/google";
 
-const font = Martel_Sans({ weight: ["200"], subsets: ["latin"] });
+const font = Gruppo({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata = {
   title: "MA Films",
