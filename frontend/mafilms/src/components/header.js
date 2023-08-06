@@ -22,12 +22,6 @@ const Header = () => {
         >
           Contact
         </Link>
-        <Link
-          className="text-gray-700 dark:text-gray-200 hover:underline"
-          href="/"
-        >
-          Contact
-        </Link>
       </nav>
     </header>
   );
