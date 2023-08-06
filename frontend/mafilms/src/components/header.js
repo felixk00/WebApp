@@ -3,14 +3,32 @@ import Logo from "./logo";
 
 const Header = () => {
   return (
-    <div className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 py-4 px-8 flex items-center justify-between">
-      <Logo />
-      <h1 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-        <Link href="/" className="hover:underline">
-          Melih Dihya
+    <header className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 py-3 px-6 flex items-center justify-between">
+      <div className="flex items-center">
+        <Logo />
+      </div>
+      <nav className="flex space-x-6">
+        <Link
+          className="text-gray-700 dark:text-gray-200 hover:underline"
+          href="/"
+        >
+          Portfolio
         </Link>
-      </h1>
-    </div>
+        <Link
+          className="text-gray-700 dark:text-gray-200 hover:underline"
+          href="/"
+        >
+          Blog
+        </Link>
+        <Link
+          className="text-gray-700 dark:text-gray-200 hover:underline"
+          href="/"
+        >
+          Contact
+        </Link>
+      </nav>
+    </header>
   );
 };
+
 export default Header;
