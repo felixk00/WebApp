@@ -50,25 +50,3 @@
 .lightText {
   color: #666;
 }
-
-/* Classes to enable glow effect conditionally (dark/bright) */
-.glow {
-  box-shadow: var(--glow-default);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.glow:hover {
-  box-shadow: var(--glow-hover);
-}
-
-.glowEffect {
-  --glow-default: 0 0 10px rgba(0, 0, 0, 0.3);
-  --glow-hover: 0 0 20px rgba(0, 0, 0, 0.7);
-}
-
-@media (prefers-color-scheme: dark) {
-  .glowEffect {
-    --glow-default: 0 0 10px rgba(255, 255, 255, 0.3);
-    --glow-hover: 0 0 20px rgba(255, 255, 255, 0.7);
-  }
-}
