@@ -1,12 +1,16 @@
-import Image from 'next/image'
-import Header from '../components/header'
+import Image from "next/image";
+import Header from "../components/header";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div > 
-        <Header/>
-      </div>
-    </main>
-  )
+    <body>
+      <Header />
+      <main className="flex min-h-screen items-center justify-center">
+        <section>
+          <h2>Example Section</h2>
+          <p>Example text goes here.</p>
+        </section>
+      </main>
+    </body>
+  );
 }
