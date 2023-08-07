@@ -1,6 +1,3 @@
-import Link from "next/link";
-import Header from "./header";
-
 const Footer = () => {
   return (
     <footer className="fixed bottom-0 left-0 w-full selection:py-3 px-6 grid grid-cols-3 mb-5 border-t border-black dark:border-white">
