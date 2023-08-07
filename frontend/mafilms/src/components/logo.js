@@ -9,8 +9,8 @@ const Logo = () => {
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
           src="/assets/logos/MA_FILMS_Logo_3.1.svg"
           alt="MA Films Logo"
-          width={90}
-          height={19}
+          width={80}
+          height={20}
           priority
         />
       </div>
