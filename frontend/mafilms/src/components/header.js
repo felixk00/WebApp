@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="col-start-1 flex items-center space-x-6">
         <Link
           className="text-gray-700 dark:text-gray-200 hover:underline"
-          href="/"
+          href="/showroom"
         >
           Showroom
         </Link>
@@ -18,7 +18,7 @@ const Header = () => {
       <nav className="col-start-3 flex items-center justify-end space-x-6">
         <Link
           className="text-gray-700 dark:text-gray-200 hover:underline"
-          href="/"
+          href="/contact"
         >
           Contact
         </Link>
