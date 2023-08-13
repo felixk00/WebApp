@@ -1,4 +1,3 @@
-import Container from "./container";
 import Link from "next/link";
 import Logo from "./logo";
 
@@ -11,90 +10,69 @@ const Footer = () => {
 
   return (
     <footer className="text-sm text-neutral-500 dark:text-neutral-400">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm dark:border-neutral-700 md:flex-row md:gap-12 md:px-4 xl:px-0">
-          <div className="mb-10 lg:mb-0 lg:w-1/2">
-            <Logo width={60} height={20} glow={true} />
-          </div>
+      <div className="justify-between items-center mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm dark:border-neutral-700 md:flex-row md:gap-12 md:px-4 xl:px-0">
+        <div className="flex flex-col items-center md:pl-10">
+          <Logo width={60} height={20} glow={true} />
+          <h3 className="text-lg py-5">Capturing in a Place of No Mind</h3>
+        </div>
 
-          <div className="tracking-tight md:tracking-tighter flex flex-col mb-10 lg:mb-0 lg:pr-4 lg:w-1/4">
+        <div className="flex flex-row space-x-10 md:text-lg md:pr-10">
+          <div className="flex flex-col text-left tracking-tight md:tracking-tighter">
             <h3 className="mb-2 font-bold ">MA Films</h3>
-            <Link
-              className="text-gray-700 dark:text-gray-200 hover:underline"
-              href="/"
-            >
+            <Link className="hover:underline" href="/">
               Showroom
             </Link>
-            <Link
-              className="text-gray-700 dark:text-gray-200 hover:underline"
-              href="/"
-            >
+            <Link className="hover:underline" href="/">
               Blog
             </Link>
-            <Link
-              className="text-gray-700 dark:text-gray-200 hover:underline"
-              href="/"
-            >
+            <Link className="hover:underline" href="/">
               Instagram
             </Link>
-            <Link
-              className="text-gray-700 dark:text-gray-200 hover:underline"
-              href="/"
-            >
+            <Link className="hover:underline" href="/">
               Behance
             </Link>
           </div>
 
-          <div className="tracking-tight md:tracking-tighter flex flex-col mb-10 lg:mb-0 lg:pr-4 lg:w-1/4">
+          <div className="flex flex-col text-left tracking-tight md:tracking-tighter">
             <h3 className="mb-2 font-bold ">Legal Notices</h3>
-            <Link
-              className="text-gray-700 dark:text-gray-200 hover:underline"
-              href="/"
-            >
+            <Link className="hover:underline" href="/">
               About
             </Link>
-            <Link
-              className="text-gray-700 dark:text-gray-200 hover:underline"
-              href="/"
-            >
+            <Link className="hover:underline" href="/">
               Contact
             </Link>
-            <Link
-              className="text-gray-700 dark:text-gray-200 hover:underline"
-              href="/"
-            >
+            <Link className="hover:underline" href="/">
               Imprint
             </Link>
-            <Link
-              className="text-gray-700 dark:text-gray-200 hover:underline"
-              href="/"
-            >
+            <Link className="hover:underline" href="/">
               Privacy
             </Link>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
-          <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 xl:px-0">
-            <p>
-              &copy; {copyrightDate} {copyrightName}
-              {copyrightName.length && !copyrightName.endsWith(".")
-                ? "."
-                : ""}{" "}
-              All rights reserved.
-            </p>
-            <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
-            <p>Designed in Karlsruhe</p>
-            <p className="md:ml-auto">
-              Crafted by{" "}
-              <a
-                href="https://www.instagram.com/melihdihya_sw/"
-                className="text-black dark:text-white"
-              >
-                Melih Dihya
-              </a>
-            </p>
-          </div>
+      <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 xl:px-0">
+          <p>
+            &copy; {copyrightDate} {copyrightName}
+            {copyrightName.length && !copyrightName.endsWith(".")
+              ? "."
+              : ""}{" "}
+            All rights reserved.
+          </p>
+          <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
+          <p>Designed in Karlsruhe</p>
+          <p className="md:ml-auto">
+            Crafted by{" "}
+            <a
+              href="https://www.instagram.com/melihdihya_sw/"
+              className="text-black dark:text-white"
+            >
+              Melih Dihya
+            </a>
+          </p>
         </div>
+      </div>
     </footer>
   );
 };
