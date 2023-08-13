@@ -10,9 +10,8 @@ const Footer = () => {
   const copyrightName = COMPANY_NAME ?? SITE_NAME ?? "Melih Dihya";
 
   return (
-    <footer className="border-t border-black dark:border-white">
-      <Container>
-        <div className="lg:text-lg py-28 flex flex-col lg:flex-row items-center text-left">
+    <footer className="text-sm text-neutral-500 dark:text-neutral-400">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm dark:border-neutral-700 md:flex-row md:gap-12 md:px-4 xl:px-0">
           <div className="mb-10 lg:mb-0 lg:w-1/2">
             <Logo width={60} height={20} glow={true} />
           </div>
@@ -96,7 +95,6 @@ const Footer = () => {
             </p>
           </div>
         </div>
-      </Container>
     </footer>
   );
 };
