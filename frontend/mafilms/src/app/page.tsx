@@ -8,8 +8,8 @@ export default function Home() {
       <Header />
       <main className="flex min-h-screen items-center justify-center">
         <section>
-          <h2>Example Section.</h2>
-          <p>Example text goes here.</p>
+          <h2></h2>
+          <p></p>
         </section>
       </main>
       <Footer />

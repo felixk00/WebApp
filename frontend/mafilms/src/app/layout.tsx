@@ -1,25 +1,25 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import Gruppo from 'next/font/local'
+import "./globals.css";
+import type { Metadata } from "next";
+import Gruppo from "next/font/local";
 
 const gruppo = Gruppo({
-  src: './Gruppo-Regular.ttf',
-  display: 'swap',
-})
+  src: "./Gruppo-Regular.ttf",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'MA Films',
-  description: 'Melih Dihya Photography',
-}
+  title: "MA Films",
+  description: "Melih Dihya Photography",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={gruppo.className}>
       <body>{children}</body>
     </html>
-  )
+  );
 }
