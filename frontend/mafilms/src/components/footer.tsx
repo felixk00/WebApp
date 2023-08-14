@@ -1,3 +1,4 @@
+import { mainLinks, legalLinks } from "./footerLinks";
 import Link from "next/link";
 import Logo from "./logo";
 
@@ -19,34 +20,28 @@ const Footer = () => {
         <div className="flex flex-row space-x-10 md:text-lg md:pr-10">
           <div className="flex flex-col text-left tracking-tight md:tracking-tighter">
             <h3 className="mb-2 font-bold ">MA Films</h3>
-            <Link className="hover:underline" href="/">
-              Showroom
-            </Link>
-            <Link className="hover:underline" href="/">
-              Blog
-            </Link>
-            <Link className="hover:underline" href="/">
-              Instagram
-            </Link>
-            <Link className="hover:underline" href="/">
-              Behance
-            </Link>
+            {mainLinks.map((link) => (
+              <Link
+                key={link.label}
+                className="hover:underline"
+                href={link.href}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           <div className="flex flex-col text-left tracking-tight md:tracking-tighter">
             <h3 className="mb-2 font-bold ">Legal Notices</h3>
-            <Link className="hover:underline" href="/">
-              About
-            </Link>
-            <Link className="hover:underline" href="/">
-              Contact
-            </Link>
-            <Link className="hover:underline" href="/">
-              Imprint
-            </Link>
-            <Link className="hover:underline" href="/">
-              Privacy
-            </Link>
+            {legalLinks.map((link) => (
+              <Link
+                key={link.label}
+                className="hover:underline"
+                href={link.href}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
