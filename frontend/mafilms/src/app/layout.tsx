@@ -19,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={gruppo.className}>
-      <body>{children}</body>
+      <body>
+        <main className="relative">{children}</main>
+      </body>
     </html>
   );
 }
