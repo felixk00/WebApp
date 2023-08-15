@@ -1,4 +1,4 @@
-import { mainLinks, legalLinks } from "./footerLinks";
+import { mainLinks, legalLinks } from "../links/footerLinks";
 import Link from "next/link";
 import Logo from "./logo";
 
