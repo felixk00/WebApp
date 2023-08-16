@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="text-sm text-neutral-500 dark:text-neutral-400">
-      <div className="justify-between items-center mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm dark:border-neutral-700 md:flex-row md:gap-12 md:px-4 xl:px-0">
+      <div className="justify-between items-center mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 dark:border-neutral-700 md:flex-row md:gap-12 md:px-4 xl:px-0">
         <div className="flex flex-col items-center md:pl-10">
           <Logo width={60} height={20} glow={true} />
           <h3 className="text-lg py-5">Capturing in a Place of No Mind</h3>
