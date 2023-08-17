@@ -1,4 +1,4 @@
-import Header from "../../components/header";
+import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
 export default function PageLayout({
@@ -8,7 +8,7 @@ export default function PageLayout({
 }) {
   return (
     <>
-      <Header />
+      <Navbar />
       {children}
       <Footer />
     </>
