@@ -3,7 +3,6 @@ import Link from "next/link";
 import Logo from "./logo";
 
 const { COMPANY_NAME, SITE_NAME } = process.env;
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : "");

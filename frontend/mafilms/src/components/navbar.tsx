@@ -30,6 +30,17 @@ const Navbar = () => {
     window.addEventListener("scroll", applyBorder);
   }, []);
 
+  useEffect(() => {
+    if (nav) {
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "auto";
+    }
+    return () => {
+      document.documentElement.style.overflow = "auto";
+    };
+  }, [nav]);
+
   return (
     <div
       className={`${border} ${styles.navbar} transition-all fixed left-0 top-0 w-full z-10 ease-in duration-300 text-neutral-600 dark:text-neutral-300`}
