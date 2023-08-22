@@ -1,4 +1,4 @@
-import { mainLinks, legalLinks } from "../links/footerLinks";
+import { mainLinks, Links } from "../links/footerLinks";
 import Link from "next/link";
 import Logo from "./logo";
 
@@ -32,8 +32,8 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col text-left tracking-tight md:tracking-tighter">
-            <h3 className="mb-2 font-bold ">Legal Notices</h3>
-            {legalLinks.map((link) => (
+            <h3 className="mb-2 font-bold ">Links</h3>
+            {Links.map((link) => (
               <Link
                 key={link.label}
                 className="hover:underline"
