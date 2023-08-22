@@ -5,28 +5,15 @@ import Link from "next/link";
 import Logo from "./logo";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import styles from "../styles/utils.module.css";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [border, setBorder] = useState("");
-  const [color, setColor] = useState("transparent");
-
 
   const handleNav = () => {
     setNav(!nav);
   };
-
-  useEffect(() => {
-    const changeColor = () => {
-      const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (window.scrollY >= 10) {
-        setColor(isDarkMode ? "#181B1E" : "#D6D9DC" );
-      } else {
-        setColor("transparent");
-      }
-    };
-    window.addEventListener("scroll", changeColor);
-  }, []);
 
   useEffect(() => {
     const applyBorder = () => {
@@ -41,8 +28,7 @@ const Navbar = () => {
 
   return (
     <div
-      style={{ backgroundColor: `${color}` }}
-      className={`${border} transition-all fixed left-0 top-0 w-full z-10 ease-in duration-300 text-neutral-600 dark:text-neutral-300`}
+      className={`${border} ${styles.navbar} transition-all fixed left-0 top-0 w-full z-10 ease-in duration-300 text-neutral-600 dark:text-neutral-300`}
     >
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4">
         <Logo width={65} height={20} glow={false} />

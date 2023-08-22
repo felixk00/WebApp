@@ -50,3 +50,11 @@
 .lightText {
   color: #666;
 }
+
+.navbar {
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb)) 1200px
+  );
+}
