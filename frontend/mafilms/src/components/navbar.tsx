@@ -11,6 +11,10 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [border, setBorder] = useState("");
 
+  const mobileMenuClassName = `${styles.colors} sm:hidden absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-screen text-center ease-in duration-300`;
+  const mobileMenuVisibleClassName = `${mobileMenuClassName} opacity-100 transform translate-x-0`;
+  const mobileMenuHiddenClassName = `${mobileMenuClassName} opacity-0 transform -translate-x-full`;
+
   const handleNav = () => {
     setNav(!nav);
   };
@@ -48,13 +52,12 @@ const Navbar = () => {
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
+
         {/* Mobile Menu */}
         <div
-          className={`${
-            nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-screen bg-black text-center opacity-100 transform translate-x-0 ease-in duration-300"
-              : "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-screen bg-black text-center opacity-0 transform -translate-x-full ease-in duration-300"
-          }`}
+          className={
+            nav ? mobileMenuVisibleClassName : mobileMenuHiddenClassName
+          }
         >
           <ul>
             {mainLinks.map((link) => (
