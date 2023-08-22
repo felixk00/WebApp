@@ -1,6 +1,6 @@
 "use client";
 
-import { mainLinks } from "../links/navbarLinks";
+import { mainLinks } from "../links/links";
 import Link from "next/link";
 import Logo from "./logo";
 import React, { useState, useEffect } from "react";

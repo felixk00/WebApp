@@ -1,4 +1,4 @@
-import { mainLinks, Links } from "../links/footerLinks";
+import { Links, mainLinks } from "../links/links";
 import Link from "next/link";
 import Logo from "./logo";
 
