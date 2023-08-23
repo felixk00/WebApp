@@ -13,16 +13,14 @@ const Logo = ({ width = 80, height = 20, glow = false }: LogoProps) => {
     : "relative dark:invert";
 
   return (
-    <Link href="/">
-      <Image
-        className={logoClass}
-        src="/assets/logos/MA_FILMS_Logo_3.1.svg"
-        alt="MA Films Logo"
-        width={width}
-        height={height}
-        priority
-      />
-    </Link>
+    <Image
+      className={logoClass}
+      src="/assets/logos/MA_FILMS_Logo_3.1.svg"
+      alt="MA Films Logo"
+      width={width}
+      height={height}
+      priority
+    />
   );
 };
 

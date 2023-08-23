@@ -2,8 +2,7 @@
 
 import { mainLinks } from "../links/links";
 import Link from "next/link";
-import Logo from "./logo";
-import LogoRaw from "./LogoRaw";
+import LogoRaw from "./logoRaw";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import styles from "../styles/utils.module.css";
@@ -58,9 +57,10 @@ const Navbar = () => {
     <div
       className={`${border} ${styles.navbar} transition-all fixed left-0 top-0 w-full z-10 ease-in duration-300 text-neutral-600 dark:text-neutral-300`}
     >
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4">
-        <Logo width={60} height={20} glow={false} />
-
+      <div className="max-w-2xl m-auto flex justify-between items-center px-4 py-1">
+        <Link href="/">
+          <LogoRaw />
+        </Link>
         {/* Desktop Navigation */}
         <ul className="hidden sm:flex">
           {mainLinks.map((link) => (
