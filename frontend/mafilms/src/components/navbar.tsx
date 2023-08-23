@@ -3,6 +3,7 @@
 import { mainLinks } from "../links/links";
 import Link from "next/link";
 import Logo from "./logo";
+import LogoRaw from "./LogoRaw";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import styles from "../styles/utils.module.css";
@@ -93,7 +94,10 @@ const Navbar = () => {
             nav ? mobileMenuVisibleClassName : mobileMenuHiddenClassName
           }
         >
-          <ul>
+          <div className="mb-8">
+            <LogoRaw />
+          </div>
+          <ul className=" mb-14">
             {mainLinks.map((link) => (
               <li
                 onClick={handleNav}
