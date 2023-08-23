@@ -1,6 +1,6 @@
 export default function Showroom() {
     return (
-      <div className="h-[90vh] pt-96">
+      <div className="">
         Showroom
       </div>
     );
