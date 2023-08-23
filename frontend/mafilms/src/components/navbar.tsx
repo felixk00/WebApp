@@ -65,12 +65,12 @@ const Navbar = () => {
         <ul className="hidden sm:flex">
           {mainLinks.map((link) => (
             <li
-              className={`p-4 text-lg hover:text-gray-500 ${
+              className={`p-4 text-lg ${
                 currentRoute === link.href ? "text-red-900" : ""
               }`}
               key={link.label}
             >
-              <Link className="hover:underline" href={link.href}>
+              <Link className="hover:text-gray-500" href={link.href}>
                 {link.label}
               </Link>
             </li>
@@ -101,12 +101,12 @@ const Navbar = () => {
             {mainLinks.map((link) => (
               <li
                 onClick={handleNav}
-                className={`p-4 text-4xl hover:text-gray-500 ${
+                className={`p-4 text-4xl ${
                   currentRoute === link.href ? "text-red-900" : ""
                 }`}
                 key={link.label}
               >
-                <Link className="hover:underline" href={link.href}>
+                <Link className="hover:text-gray-500" href={link.href}>
                   {link.label}
                 </Link>
               </li>
