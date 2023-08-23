@@ -1,4 +1,5 @@
 export const mainLinks = [
+  { label: "Home", href: "/" },
   { label: "Showroom", href: "/showroom" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
