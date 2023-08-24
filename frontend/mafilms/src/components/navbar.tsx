@@ -94,9 +94,9 @@ const Navbar = () => {
             nav ? mobileMenuVisibleClassName : mobileMenuHiddenClassName
           }
         >
-          <div className="mb-8">
+          <Link href="/" className="mb-8" onClick={handleNav}>
             <LogoRaw />
-          </div>
+          </Link>
           <ul className="mb-14">
             {mainLinks.map((link) => (
               <li
