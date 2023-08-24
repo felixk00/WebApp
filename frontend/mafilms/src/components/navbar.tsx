@@ -57,7 +57,7 @@ const Navbar = () => {
     <div
       className={`${border} ${styles.navbar} transition-all fixed left-0 top-0 w-full z-10 ease-in duration-300 text-neutral-600 dark:text-neutral-300`}
     >
-      <div className="max-w-2xl m-auto flex justify-between items-center px-4 py-1">
+      <div className="max-w-7xl m-auto flex justify-between items-center px-4 py-1">
         <Link href="/">
           <LogoRaw />
         </Link>
@@ -65,7 +65,7 @@ const Navbar = () => {
         <ul className="hidden sm:flex">
           {mainLinks.map((link) => (
             <li
-              className={`p-4 text-lg ${
+              className={`px-4 text-lg ${
                 currentRoute === link.href ? "text-red-900" : ""
               }`}
               key={link.label}
@@ -97,7 +97,7 @@ const Navbar = () => {
           <div className="mb-8">
             <LogoRaw />
           </div>
-          <ul className=" mb-14">
+          <ul className="mb-14">
             {mainLinks.map((link) => (
               <li
                 onClick={handleNav}
