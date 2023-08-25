@@ -66,7 +66,7 @@ const Navbar = () => {
           {mainLinks.map((link) => (
             <li
               className={`px-4 text-lg ${
-                currentRoute === link.href ? "text-red-900" : ""
+                currentRoute === link.href ? "text-red-700" : ""
               }`}
               key={link.label}
             >
@@ -78,7 +78,7 @@ const Navbar = () => {
         </ul>
 
         {currentRoute && (
-          <span className="block sm:hidden text-2xl text-red-900">
+          <span className="block sm:hidden text-2xl text-red-700">
             {routeDisplayNames[currentRoute] || "Unknown"}
           </span>
         )}
@@ -102,7 +102,7 @@ const Navbar = () => {
               <li
                 onClick={handleNav}
                 className={`p-4 text-4xl ${
-                  currentRoute === link.href ? "text-red-900" : ""
+                  currentRoute === link.href ? "text-red-700" : ""
                 }`}
                 key={link.label}
               >
