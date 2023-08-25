@@ -33,8 +33,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const applyBorder = () => {
-      if (window.scrollY >= 30) {
-        setBorder("border-b border-neutral-400");
+      if (window.scrollY >= 50) {
+        setBorder("border-b border-neutral-400 dark:border-neutral-300");
       } else {
         setBorder("");
       }
@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${border} ${styles.navbar} transition-all fixed left-0 top-0 w-full z-10 ease-in duration-300 text-neutral-600 dark:text-neutral-300`}
+      className={`${border} ${styles.navbar} transition-all fixed left-0 top-0 w-full z-10 text-neutral-600 dark:text-neutral-300`}
     >
       <div className="max-w-7xl m-auto flex justify-between items-center px-4 py-1">
         <Link href="/">
