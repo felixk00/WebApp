@@ -24,8 +24,8 @@ const Navbar = () => {
   const currentRoute = usePathname();
 
   const mobileMenuClassName = `${styles.colors} sm:hidden absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-screen text-center ease-in duration-300`;
-  const mobileMenuVisibleClassName = `${mobileMenuClassName} opacity-100 transform translate-x-0`;
-  const mobileMenuHiddenClassName = `${mobileMenuClassName} opacity-0 transform -translate-x-full`;
+  const mobileMenuVisibleClassName = `${mobileMenuClassName} opacity-100 translate-x-0`;
+  const mobileMenuHiddenClassName = `${mobileMenuClassName} opacity-0 -translate-x-full`;
 
   const handleNav = () => {
     setNav(!nav);
