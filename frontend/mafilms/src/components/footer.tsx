@@ -1,6 +1,6 @@
 import { Links, mainLinks } from "../links/links";
 import Link from "next/link";
-import LogoRaw from "./logoRaw";
+import Logo from "./logo";
 
 const { COMPANY_NAME, SITE_NAME } = process.env;
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="justify-between items-center mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-4 py-12 dark:border-neutral-700 sm:flex-row sm:gap-12">
         <div className="flex flex-col items-center">
           <Link href="/">
-            <LogoRaw />
+            <Logo />
           </Link>
           <h3 className="text-lg py-5">Capturing in a Place of No Mind</h3>
         </div>
