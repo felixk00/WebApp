@@ -1,7 +1,3 @@
 export default function Showroom() {
-    return (
-      <div className="">
-        Showroom
-      </div>
-    );
-  }
+  return <div className=''>Showroom</div>;
+}

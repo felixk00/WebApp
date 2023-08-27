@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 type LogoProps = {
   width?: number;
@@ -7,14 +7,21 @@ type LogoProps = {
   logoFile?: string;
 };
 
-const Logo = ({ width = 70, height = 20, glow = false, logoFile = "MA_FILMS_Logo_2.2_Raw.svg" }: LogoProps) => {
-  const logoClass = `dark:invert ${glow ? "dark:drop-shadow-[0_0_0.3rem_#ffffff70]" : ""}`;
+const Logo = ({
+  width = 70,
+  height = 20,
+  glow = false,
+  logoFile = 'MA_FILMS_Logo_2.2_Raw.svg',
+}: LogoProps) => {
+  const logoClass = `dark:invert ${
+    glow ? 'dark:drop-shadow-[0_0_0.3rem_#ffffff70]' : ''
+  }`;
 
   return (
     <Image
       className={logoClass}
       src={`/assets/logos/${logoFile}`}
-      alt="MA Films Logo"
+      alt='MA Films Logo'
       width={width}
       height={height}
       priority
@@ -23,4 +30,3 @@ const Logo = ({ width = 70, height = 20, glow = false, logoFile = "MA_FILMS_Logo
 };
 
 export default Logo;
-

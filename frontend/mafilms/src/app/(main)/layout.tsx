@@ -1,5 +1,5 @@
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
+import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
 
 export default function PageLayout({
   children,
@@ -7,11 +7,9 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className='flex min-h-screen flex-col'>
       <Navbar />
-      <main className="flex-grow pt-40 pb-10">
-        {children}
-      </main>
+      <main className='flex-grow pb-10 pt-40'>{children}</main>
       <Footer />
     </div>
   );

@@ -1,15 +1,15 @@
-import "../styles/globals.css"
-import type { Metadata } from "next";
-import Gruppo from "next/font/local";
+import '../styles/globals.css';
+import type { Metadata } from 'next';
+import Gruppo from 'next/font/local';
 
 const gruppo = Gruppo({
-  src: "./Gruppo-Regular.ttf",
-  display: "swap",
+  src: './Gruppo-Regular.ttf',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "MA Films",
-  description: "Melih Dihya Photography",
+  title: 'MA Films',
+  description: 'Melih Dihya Photography',
 };
 
 export default function RootLayout({
@@ -18,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={gruppo.className}>
+    <html lang='en' className={gruppo.className}>
       <body>
-        <main className="relative">{children}</main>
+        <main className='relative'>{children}</main>
       </body>
     </html>
   );

@@ -23,9 +23,9 @@ const Navbar = () => {
   const [border, setBorder] = useState('');
   const currentRoute = usePathname();
 
-  const mobileMenuClassName = `${styles.colors} sm:hidden absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-screen text-center ease-in duration-300`;
-  const mobileMenuVisibleClassName = `${mobileMenuClassName} opacity-100 translate-x-0`;
-  const mobileMenuHiddenClassName = `${mobileMenuClassName} opacity-0 -translate-x-full`;
+  const mobileMenuClassName = `${styles.colors} absolute bottom-0 left-0 right-0 top-0 flex h-screen w-full flex-col items-center justify-center text-center duration-300 ease-in sm:hidden`;
+  const mobileMenuVisibleClassName = `${mobileMenuClassName} translate-x-0 opacity-100`;
+  const mobileMenuHiddenClassName = `${mobileMenuClassName} -translate-x-full opacity-0`;
 
   const handleNav = () => {
     setNav(!nav);
@@ -61,6 +61,7 @@ const Navbar = () => {
         <Link href='/'>
           <Logo />
         </Link>
+
         {/* Desktop Navigation */}
         <ul className='hidden sm:flex'>
           {mainLinks.map((link) => (

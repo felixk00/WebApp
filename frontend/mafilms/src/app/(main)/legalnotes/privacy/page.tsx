@@ -1,7 +1,3 @@
 export default function Privacy() {
-    return (
-      <div className="">
-        Privacy
-      </div>
-    );
-  }
+  return <div className=''>Privacy</div>;
+}
