@@ -19,31 +19,27 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-row space-x-10 md:text-lg">
-          <div className="flex flex-col text-left tracking-tight md:tracking-tighter">
+          <ul className="flex flex-col text-left tracking-tight md:tracking-tighter">
             <h3 className="mb-2 font-bold ">MA Films</h3>
             {mainLinks.map((link) => (
-              <Link
-                key={link.label}
-                className="hover:underline"
-                href={link.href}
-              >
-                {link.label}
-              </Link>
+              <li key={link.label}>
+                <Link className="hover:underline" href={link.href}>
+                  {link.label}
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
 
-          <div className="flex flex-col text-left tracking-tight md:tracking-tighter">
+          <ul className="flex flex-col text-left tracking-tight md:tracking-tighter">
             <h3 className="mb-2 font-bold ">Links</h3>
             {Links.map((link) => (
-              <Link
-                key={link.label}
-                className="hover:underline"
-                href={link.href}
-              >
-                {link.label}
-              </Link>
+              <li key={link.label}>
+                <Link className="hover:underline" href={link.href}>
+                  {link.label}
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
 
