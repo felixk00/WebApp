@@ -1,12 +1,12 @@
 'use client';
 
+import styles from '../styles/utils.module.css';
 import LinkList from './linkList';
 import CurrentRoute from './currentRoute';
-import Link from 'next/link';
 import Logo from './logo';
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import styles from '../styles/utils.module.css';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);

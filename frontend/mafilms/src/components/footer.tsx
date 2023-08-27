@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Logo from './logo';
 import LinkList from './linkList';
+import Logo from './logo';
+import Link from 'next/link';
 
 const { COMPANY_NAME, SITE_NAME } = process.env;
 const Footer = () => {
