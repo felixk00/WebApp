@@ -53,7 +53,6 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className='hidden sm:flex'>
           <LinkList
-            list='mainLinks'
             className='px-4 text-lg hover:text-gray-500'
             showRoute={true}
           />
@@ -78,7 +77,6 @@ const Navbar = () => {
 
           <ul className='mb-14 flex flex-col'>
             <LinkList
-              list='mainLinks'
               className='p-4 text-4xl hover:text-gray-500 '
               showRoute={true}
               functionData={{ handler: handleNav, state: nav }}
