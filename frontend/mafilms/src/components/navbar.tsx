@@ -1,28 +1,16 @@
 'use client';
 
 import LinkList from './linkList';
+import CurrentRoute from './currentRoute';
 import Link from 'next/link';
 import Logo from './logo';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import styles from '../styles/utils.module.css';
-import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
-  const routeDisplayNames: Record<string, string> = {
-    '/': 'Home',
-    '/showroom': 'Showroom',
-    '/blog': 'Blog',
-    '/about': 'About',
-    '/contact': 'Contact',
-    '/legalnotes/imprint': 'Imprint',
-    '/legalnotes/privacy': 'Privacy',
-  };
-
   const [nav, setNav] = useState(false);
   const [border, setBorder] = useState('');
-  const currentRoute = usePathname();
-
   const mobileMenuClassName = `${styles.colors} absolute bottom-0 left-0 right-0 top-0 flex h-screen w-full flex-col items-center justify-center text-center duration-300 ease-in sm:hidden`;
   const mobileMenuVisibleClassName = `${mobileMenuClassName} translate-x-0 opacity-100`;
   const mobileMenuHiddenClassName = `${mobileMenuClassName} -translate-x-full opacity-0`;
@@ -71,11 +59,7 @@ const Navbar = () => {
           />
         </ul>
 
-        {currentRoute && (
-          <span className='absolute left-1/2 block -translate-x-1/2 text-2xl text-red-700 sm:hidden'>
-            {routeDisplayNames[currentRoute] || 'Unknown'}
-          </span>
-        )}
+        <CurrentRoute className='absolute left-1/2 block -translate-x-1/2 text-2xl text-red-700 sm:hidden' />
 
         {/* Mobile Button */}
         <div onClick={handleNav} className='z-10 block sm:hidden'>
