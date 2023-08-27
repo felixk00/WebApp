@@ -1,6 +1,6 @@
-import { Links, mainLinks } from '../links/links';
 import Link from 'next/link';
 import Logo from './logo';
+import LinkList from './links';
 
 const { COMPANY_NAME, SITE_NAME } = process.env;
 const Footer = () => {
@@ -21,24 +21,16 @@ const Footer = () => {
         <div className='flex flex-row space-x-10 md:text-lg'>
           <ul className='flex flex-col text-left tracking-tight md:tracking-tighter'>
             <h3 className='mb-2 font-bold '>MA Films</h3>
-            {mainLinks.map((link) => (
-              <li key={link.label}>
-                <Link className='hover:underline' href={link.href}>
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            <LinkList className='hover:underline' showRoute={true} />
           </ul>
 
           <ul className='flex flex-col text-left tracking-tight md:tracking-tighter'>
             <h3 className='mb-2 font-bold '>Links</h3>
-            {Links.map((link) => (
-              <li key={link.label}>
-                <Link className='hover:underline' href={link.href}>
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            <LinkList
+              list='Links'
+              className='hover:underline'
+              showRoute={true}
+            />
           </ul>
         </div>
       </div>

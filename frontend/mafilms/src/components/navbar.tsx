@@ -1,6 +1,6 @@
 'use client';
 
-import { mainLinks } from '../links/links';
+import LinkList from './links';
 import Link from 'next/link';
 import Logo from './logo';
 import React, { useState, useEffect } from 'react';
@@ -64,18 +64,11 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className='hidden sm:flex'>
-          {mainLinks.map((link) => (
-            <li
-              className={`px-4 text-lg ${
-                currentRoute === link.href ? 'text-red-700' : ''
-              }`}
-              key={link.label}
-            >
-              <Link className='hover:text-gray-500' href={link.href}>
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          <LinkList
+            list='mainLinks'
+            className='px-4 text-lg hover:text-gray-500'
+            showRoute={true}
+          />
         </ul>
 
         {currentRoute && (
@@ -98,20 +91,14 @@ const Navbar = () => {
           <Link href='/' className='mb-8' onClick={handleNav}>
             <Logo />
           </Link>
-          <ul className='mb-14'>
-            {mainLinks.map((link) => (
-              <li
-                onClick={handleNav}
-                className={`p-4 text-4xl ${
-                  currentRoute === link.href ? 'text-red-700' : ''
-                }`}
-                key={link.label}
-              >
-                <Link className='hover:text-gray-500' href={link.href}>
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+
+          <ul className='mb-14 flex flex-col'>
+            <LinkList
+              list='mainLinks'
+              className='p-4 text-4xl hover:text-gray-500 '
+              showRoute={true}
+              functionData={{ handler: handleNav, state: nav }}
+            />
           </ul>
         </div>
       </div>
