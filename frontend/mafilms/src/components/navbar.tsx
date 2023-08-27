@@ -79,7 +79,7 @@ const Navbar = () => {
         </ul>
 
         {currentRoute && (
-          <span className='block text-2xl text-red-700 sm:hidden'>
+          <span className='absolute left-1/2 block -translate-x-1/2 text-2xl text-red-700 sm:hidden'>
             {routeDisplayNames[currentRoute] || 'Unknown'}
           </span>
         )}
