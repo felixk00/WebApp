@@ -52,9 +52,7 @@ const LinkList = ({
           href={link.href}
           key={link.label}
           onClick={() => {
-            if (functionData && functionData.handler) {
-              functionData.handler();
-            }
+            functionData?.handler?.();
           }}
         >
           {link.label}

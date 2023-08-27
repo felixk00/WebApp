@@ -1,6 +1,6 @@
 'use client';
 
-import LinkList from './links';
+import LinkList from './linkList';
 import Link from 'next/link';
 import Logo from './logo';
 import React, { useState, useEffect } from 'react';
