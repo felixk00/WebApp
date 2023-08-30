@@ -1,5 +1,5 @@
-import LinkList from './linkList';
-import Logo from './logo';
+import LinkList from './LinkList';
+import Logo from './Logo';
 import Link from 'next/link';
 
 const { COMPANY_NAME, SITE_NAME } = process.env;

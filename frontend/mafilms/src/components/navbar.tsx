@@ -1,9 +1,9 @@
 'use client';
 
 import styles from '../styles/utils.module.css';
-import LinkList from './linkList';
-import CurrentRoute from './currentRoute';
-import Logo from './logo';
+import LinkList from './LinkList';
+import CurrentRoute from './CurrentRoute';
+import Logo from './Logo';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
