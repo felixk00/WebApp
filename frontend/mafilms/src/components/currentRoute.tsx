@@ -1,10 +1,10 @@
 import { usePathname } from 'next/navigation';
 
-type routeProps = {
+type RouteProps = {
   className?: string;
 };
 
-const CurrentRoute = ({ className = '' }: routeProps) => {
+const CurrentRoute = ({ className = '' }: RouteProps) => {
   const currentRoute = usePathname();
   const routeDisplayNames: Record<string, string> = {
     '/': 'Home',

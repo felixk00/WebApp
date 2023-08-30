@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-type linkProps = {
+type LinkProps = {
   list?: 'mainLinks' | 'Links';
   className?: string;
   showRoute?: boolean;
@@ -23,7 +23,7 @@ const LinkList = ({
   className = '',
   showRoute = false,
   functionData,
-}: linkProps) => {
+}: LinkProps) => {
   const mainLinks: LinkItem[] = [
     { label: 'Home', href: '/' },
     { label: 'Showroom', href: '/showroom' },
