@@ -21,7 +21,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const applyBorder = () => {
-      if (window.scrollY >= 50) {
+      if (window.scrollY >= 30) {
         setBorder('border-b border-neutral-400 dark:border-neutral-300');
       } else {
         setBorder('');

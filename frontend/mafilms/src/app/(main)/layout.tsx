@@ -9,7 +9,7 @@ export default function PageLayout({
   return (
     <div className='flex min-h-screen flex-col'>
       <Navbar />
-      <main className='flex-grow pb-10 pt-40'>{children}</main>
+      <main className='flex-grow pb-10 pt-28'>{children}</main>
       <Footer />
     </div>
   );
