@@ -7,8 +7,5 @@ module.exports = {
     formats: ['image/avif', 'image/webp'],
     domains: ['res.cloudinary.com'],
   },
-  experimental: {
-    serverActions: true,
-  },
 };
 
