@@ -24,7 +24,7 @@ export default function Modal({
   const [curIndex, setCurIndex] = useState(index);
 
   function handleClose() {
-    router.push('/', undefined, { shallow: true });
+    router.push('/showroom/liguria');
     onClose();
   }
 
@@ -35,12 +35,7 @@ export default function Modal({
       setDirection(-1);
     }
     setCurIndex(newVal);
-    router.push(
-      {
-        query: { photoId: newVal },
-      },
-      `/p/${newVal}`,
-      { shallow: true }
+    router.push(`/showroom/liguria?photoId=${newVal}`
     );
   }
 
