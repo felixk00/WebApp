@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+import { useSearchParams } from 'next/navigation'
 import Carousel from '../../../../../components/gallery/Carousel'
 import getResults from '../../../../../utils/cachedImages'
 import cloudinary from '../../../../../utils/cloudinary'
@@ -8,8 +8,8 @@ import getBase64ImageUrl from '../../../../../utils/generateBlurPlaceholder'
 import type { ImageProps } from '../../../../../utils/types'
 
 const Home: NextPage = ({ currentPhoto }: { currentPhoto: ImageProps }) => {
-  const router = useRouter()
-  const { photoId } = router.query
+  const searchParams = useSearchParams()
+  const photoId = searchParams.get('photoId')
   let index = Number(photoId)
 
   const currentPhotoUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_2560/${currentPhoto.public_id}.${currentPhoto.format}`

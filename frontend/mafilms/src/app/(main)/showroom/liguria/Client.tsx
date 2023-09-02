@@ -2,16 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useSearchParams } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 import Logo from '../../../../components/Logo';
-import Modal from '../../../../components/gallery/Modal';
 import type { ImageProps } from '../../../../utils/types';
 import { useLastViewedPhoto } from '../../../../utils/useLastViewedPhoto';
+import Modal from '../../../../components/gallery/Modal';
 
 export default function Client({ images }: { images: ImageProps[] }) {
-  const router = useRouter();
-  const { photoId } = router.query;
+  const searchParams = useSearchParams()
+  const photoId = searchParams.get('photoId')
   const [lastViewedPhoto, setLastViewedPhoto] = useLastViewedPhoto();
 
   const lastViewedPhotoRef = useRef<HTMLAnchorElement>(null);
@@ -43,11 +43,10 @@ export default function Client({ images }: { images: ImageProps[] }) {
             </div>
             <Logo />
             <h1 className='mb-4 mt-8 text-base font-bold uppercase tracking-widest'>
-              2022 Event Photos
+              Liguria 2023
             </h1>
             <p className='max-w-[40ch] text-white/75 sm:max-w-[32ch]'>
-              Our incredible Next.js community got together in San Francisco for
-              our first ever in-person conference!
+            Pictures from a small journey through the villages of Liguria. Mountains and coasts full of charm.
             </p>
             <a
               className='pointer z-10 mt-6 rounded-lg border border-white bg-white px-3 py-2 text-sm font-semibold text-black transition hover:bg-white/10 hover:text-white md:mt-4'
@@ -86,34 +85,7 @@ export default function Client({ images }: { images: ImageProps[] }) {
         </div>
       </main>
       <footer className='p-6 text-center text-white/80 sm:p-12'>
-        Thank you to{' '}
-        <a
-          href='https://edelsonphotography.com/'
-          target='_blank'
-          className='font-semibold hover:text-white'
-          rel='noreferrer'
-        >
-          Josh Edelson
-        </a>
-        ,{' '}
-        <a
-          href='https://www.newrevmedia.com/'
-          target='_blank'
-          className='font-semibold hover:text-white'
-          rel='noreferrer'
-        >
-          Jenny Morgan
-        </a>
-        , and{' '}
-        <a
-          href='https://www.garysextonphotography.com/'
-          target='_blank'
-          className='font-semibold hover:text-white'
-          rel='noreferrer'
-        >
-          Gary Sexton
-        </a>{' '}
-        for the pictures.
+      "Anyone who predicts the weather is a liar"
       </footer>
     </>
   );
