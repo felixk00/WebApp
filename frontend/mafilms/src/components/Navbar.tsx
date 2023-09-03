@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${border} ${styles.navbar} fixed left-0 top-0 z-20 w-full text-neutral-600 transition-all dark:text-neutral-300`}
+      className={`${border} ${styles.navbar} fixed left-0 top-0 z-10 w-full text-neutral-600 transition-all dark:text-neutral-300`}
     >
       <div className='m-auto flex max-w-7xl items-center justify-between px-4 py-1'>
         <Link href='/'>
