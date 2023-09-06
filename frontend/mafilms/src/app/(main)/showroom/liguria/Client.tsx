@@ -26,7 +26,7 @@ export default function Client({ images }: { images: ImageProps[] }) {
 
   return (
     <>
-      <main className='mx-auto flex items-center justify-center p-4'>
+      <div className='mx-auto flex items-center justify-center p-4'>
         {photoId && (
           <Modal
             images={images}
@@ -84,7 +84,7 @@ export default function Client({ images }: { images: ImageProps[] }) {
             </Link>
           ))}
         </div>
-      </main>
+      </div>
       <footer className='p-6 text-center text-white/80 sm:p-12'>
         "Anyone who predicts the weather is a liar"
       </footer>
