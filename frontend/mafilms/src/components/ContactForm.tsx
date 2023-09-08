@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
 
+
 export default function ContactForm() {
     const [loading, setLoading] = useState(false);
+    const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
     async function handleSubmit(event: any) {
         event.preventDefault();
@@ -37,6 +39,9 @@ export default function ContactForm() {
         }
 
     }
+    const handlePrivacyToggle = () => {
+        setPrivacyAccepted(!privacyAccepted);
+    };
     return (
 
         <form onSubmit={handleSubmit}>
@@ -46,7 +51,7 @@ export default function ContactForm() {
                 </label>
                 <input
                     type="text"
-                    minLength={3}
+                    minLength={2}
                     maxLength={100}
                     required
                     className=" p-4 bg-gray-50 border border-gray-100"
@@ -82,6 +87,25 @@ export default function ContactForm() {
                 </textarea>
 
             </div>
+
+            <div className="w-full flex flex-col my-4">
+                <label className="font-bold text-gray-800">
+                    Accept Privacy Statement
+                </label>
+                <div className="flex items-center">
+                    <input
+                        type="checkbox"
+                        required
+                        id="privacy"
+                        checked={privacyAccepted}
+                        onChange={handlePrivacyToggle}
+                    />
+                    <label htmlFor="privacy" className="ml-2">
+                        I accept the privacy statement of MA Films
+                    </label>
+                </div>
+            </div>
+            
             <button type="submit"
             disabled={loading}
             className="px-4 py-2 w-35 bg-black disabled:bg-gray-400 disabled:text-gray-100 text text-white font-medium mt-4"
