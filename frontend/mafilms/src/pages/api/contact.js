@@ -22,7 +22,7 @@ export default async function ContactAPI(req, res) {
     try {
         const mail = await transporter.sendMail({
             from: user,
-            //bcc: "kienlefe@hs-pforzheim.de",
+            bcc: "kienlefe@hs-pforzheim.de",
             to: email,
             subject: `Contact request from ${name}`,
             html: `
