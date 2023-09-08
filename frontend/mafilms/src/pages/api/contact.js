@@ -7,11 +7,7 @@ export default async function ContactAPI(req, res) {
 
     const user = process.env.SMTP_USERNAME;
 
-    const data = {
-        name,
-        email,
-        message,
-    };
+    
 
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
@@ -26,18 +22,26 @@ export default async function ContactAPI(req, res) {
     try {
         const mail = await transporter.sendMail({
             from: user,
-            bcc: "kienlefe@hs-pforzheim.de",
+            //bcc: "kienlefe@hs-pforzheim.de",
             to: email,
-            subject: `Contact form from ${name}`,
+            subject: `Contact request from ${name}`,
             html: `
             <h1>Hi ${name}!</h1>
             <h2>Thanks for your message.</h2>
             <p>We are looking in to it. You will hear from us soon.</p>
             <p>Message: ${message}</p>
+            <p>Your email adress: ${email}</p>
+            </br>
+            </br>
+            </br>
+            </br>
             <img src="cid:contactmafilms@gmail.com" height="100" width="100"/>
             <p></p>
             <b>MA Films</b>
-            <p>Designed in Karlsruhe</p>
+            <p>Hauptstr. 5</p>
+            <p>76139 Karlsruhe</p>
+            <p>Melih Dihya</p>
+            <p>Felix Kienle</p>
             `,
             attachments: [{
                 filename: 'mafilms_Email_logo.jpg',
