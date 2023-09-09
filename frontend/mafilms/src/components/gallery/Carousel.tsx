@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import useKeypress from 'react-use-keypress';
@@ -17,7 +19,7 @@ export default function Carousel({
 
   function closeModal() {
     setLastViewedPhoto(currentPhoto.id);
-    router.push('/', undefined, { shallow: true });
+    router.push('/showroom/liguria');
   }
 
   function changePhotoId(newVal: number) {
@@ -29,7 +31,7 @@ export default function Carousel({
   });
 
   return (
-    <div className='fixed inset-0 flex items-center justify-center'>
+    <div className='fixed inset-0 z-40 flex items-center justify-center bg-black/70 backdrop-blur-2xl'>
       <button
         className='absolute inset-0 z-30 cursor-default bg-black backdrop-blur-2xl'
         onClick={closeModal}
