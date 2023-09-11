@@ -79,7 +79,7 @@ export default function SharedModal({
                   }/image/upload/c_scale,${navigation ? 'w_1280' : 'w_1920'}/${
                     currentImage.public_id
                   }.${currentImage.format}`}
-                  objectFit='contain'
+                  style={{ objectFit: 'contain' }}
                   fill
                   priority
                   alt='Next.js Conf image'
