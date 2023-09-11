@@ -9,7 +9,7 @@ type LogoProps = {
 
 const Logo = ({
   width = 70,
-  height = 20,
+  height = 70,
   glow = false,
   logoFile = 'MA_FILMS_Logo_2.2_Raw.svg',
 }: LogoProps) => {
