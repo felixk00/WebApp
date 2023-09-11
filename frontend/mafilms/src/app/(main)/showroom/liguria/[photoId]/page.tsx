@@ -3,13 +3,27 @@ import cloudinary from '../../../../../utils/cloudinary';
 import { getCurrentPhoto } from '../../../../../utils/getCurrentPhoto';
 import type { NextPage } from 'next';
 
-interface HomeProps {
+export async function generateStaticParams() {
+  const results = await cloudinary.v2.search
+    .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
+    .sort_by('public_id', 'desc')
+    .max_results(400)
+    .execute();
+
+  const staticParams = results.resources.map((resource, index) => ({
+    photoId: index.toString(),
+  }));
+
+  return staticParams;
+}
+
+interface PhotoProps {
   params: {
     photoId: string;
   };
 }
 
-const Home: NextPage<HomeProps> = async ({ params }) => {
+const Photo: NextPage<PhotoProps> = async ({ params }) => {
   const photoId = params.photoId;
   let index = Number(photoId);
   const currentPhoto = await getCurrentPhoto(photoId);
@@ -24,22 +38,4 @@ const Home: NextPage<HomeProps> = async ({ params }) => {
   );
 };
 
-export default Home;
-
-//  export async function generateStaticParams() {
-//    const results = await cloudinary.v2.search
-//      .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
-//     .sort_by('public_id', 'desc')
-//     .max_results(400)
-//     .execute()
-
-//   let fullPaths = []
-//   for (let i = 0; i < results.resources.length; i++) {
-//     fullPaths.push({ params: { photoId: i.toString() } })
-//   }
-
-//   return {
-//     paths: fullPaths,
-//     fallback: false,
-//   }
-// }
+export default Photo;
