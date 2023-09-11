@@ -10,6 +10,7 @@ const gruppo = Gruppo({
 export const metadata: Metadata = {
   title: 'MA Films',
   description: 'Melih Dihya Photography',
+  metadataBase: new URL('https://ma-films.com'),
 };
 
 export default function RootLayout({
