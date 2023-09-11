@@ -15,9 +15,8 @@ export default function Modal({
 }) {
   let overlayRef = useRef();
   const router = useRouter();
-
-  const searchParams = useSearchParams()
-  const photoId = searchParams.get('photoId')
+  const searchParams = useSearchParams();
+  const photoId = searchParams.get('photoId');
   let index = Number(photoId);
 
   const [direction, setDirection] = useState(0);
@@ -35,8 +34,7 @@ export default function Modal({
       setDirection(-1);
     }
     setCurIndex(newVal);
-    router.push(`/showroom/liguria?photoId=${newVal}`
-    );
+    router.push(`/showroom/liguria/${newVal}?photoId=${newVal}`);
   }
 
   useKeypress('ArrowRight', () => {
