@@ -1,14 +1,32 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 
 export default function ContactForm() {
     const [loading, setLoading] = useState(false);
     const [privacyAccepted, setPrivacyAccepted] = useState(false);
+    const [formSubmitted, setFormSubmitted] = useState(false);
+
+    useEffect(() => {
+        // Check if the form has been submitted in session storage
+        const isFormSubmitted = sessionStorage.getItem("formSubmitted");
+
+        if (isFormSubmitted === "true") {
+            setFormSubmitted(true);
+        }
+    }, []);
+
 
     async function handleSubmit(event: any) {
         event.preventDefault();
+
+        // If form is already submitted, do nothing
+        if (formSubmitted) {
+            return;
+        }
         setLoading(true);
+        setFormSubmitted(true);
 
         const data = {
             name: String(event.target.name.value),
@@ -38,14 +56,26 @@ export default function ContactForm() {
             setLoading(false);
         }
 
+        // After submission, set a session storage flag to indicate submission
+        sessionStorage.setItem("formSubmitted", "true");
+
+        // Reset the flag after a delay
+        setTimeout(() => {
+            sessionStorage.removeItem("formSubmitted");
+        }, 60000); // Remove the flag after 60 seconds
+
+
     }
     const handlePrivacyToggle = () => {
         setPrivacyAccepted(!privacyAccepted);
     };
+
+
+
     return (
 
         <form onSubmit={handleSubmit}>
-            <div className="w-full flex flex-col my-4">
+            <div className="w-full flex flex-col my-4 text-lg">
                 <label className="font-bold text-gray-800" htmlFor="name">
                     Name
                 </label>
@@ -59,7 +89,7 @@ export default function ContactForm() {
                     id="name"
                 />
             </div>
-            <div className="w-full flex flex-col my-4">
+            <div className="w-full flex flex-col my-4 text-lg">
                 <label className="font-bold text-gray-800" htmlFor="email">
                     E-Mail
                 </label>
@@ -73,7 +103,7 @@ export default function ContactForm() {
                     id="email" />
             </div>
             <div>
-                <label className="font-bold text-gray-800" htmlFor="message">
+                <label className="font-bold text-gray-800 text-lg" htmlFor="message">
                     Message
                 </label>
                 <textarea
@@ -83,12 +113,12 @@ export default function ContactForm() {
                     maxLength={500}
                     name="message"
                     placeholder="Leave us a Message"
-                    className="w-full p-4 bg-gray-50 border border-gray-100">
+                    className="w-full p-4 bg-gray-50 border border-gray-100 text-lg">
                 </textarea>
 
             </div>
 
-            <div className="w-full flex flex-col my-4">
+            <div className="w-full flex flex-col my-4 text-lg">
                 <label className="font-bold text-gray-800">
                     Accept Privacy Statement
                 </label>
@@ -105,11 +135,12 @@ export default function ContactForm() {
                     </label>
                 </div>
             </div>
-            
-            <button type="submit"
-            disabled={loading}
-            className="px-4 py-2 w-35 bg-black disabled:bg-gray-400 disabled:text-gray-100 text text-white font-medium mt-4"
-            >Send Message</button>
+
+            <button id="submitButton" type="submit"
+                disabled={loading || formSubmitted}
+                className="text-lg px-4 py-2 w-35 bg-black disabled:bg-gray-400 
+                disabled:text-gray-100 text text-white font-medium mt-3"
+            >{formSubmitted ? 'Form Submitted' : 'Send Message'}</button>
         </form>
     )
 }
