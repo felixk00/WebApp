@@ -9,13 +9,13 @@ import type { ImageProps } from '../../../../utils/types';
 import { useLastViewedPhoto } from '../../../../utils/useLastViewedPhoto';
 import Modal from '../../../../components/gallery/Modal';
 
-export default async function Page() {
+export default async function Liguira() {
   const response = await fetch('http://localhost:3000/api/cdn');
   const images = await response.json();
-  return <Client images={images} />;
+  return <Gallery images={images} />;
 }
 
-export function Client({ images }: { images: ImageProps[] }) {
+export function Gallery({ images }: { images: ImageProps[] }) {
   const searchParams = useSearchParams();
   const photoId = searchParams.get('photoId');
   const [lastViewedPhoto, setLastViewedPhoto] = useLastViewedPhoto();

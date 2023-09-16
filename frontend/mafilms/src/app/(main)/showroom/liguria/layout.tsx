@@ -3,7 +3,7 @@ export const metadata = {
   description: 'Photos from a trip to liguria',
 };
 
-export default function RootLayout({
+export default function PageLayout({
   children,
 }: {
   children: React.ReactNode;
