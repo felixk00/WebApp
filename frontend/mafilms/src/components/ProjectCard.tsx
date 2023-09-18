@@ -19,7 +19,7 @@ export default function ProjectCard({
   return (
     <Link href={href}>
       <div
-        className='after:content shadow-highlight after:shadow-highlight relative mb-5 flex h-[629px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-16 pt-64 text-center text-white after:pointer-events-none after:absolute after:inset-0 after:rounded-lg lg:pt-0'
+        className='after:content shadow-highlight after:shadow-highlight relative mb-5 flex h-[629px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-16 pt-64 text-center text-white brightness-90 transition after:pointer-events-none after:absolute after:inset-0 after:rounded-lg hover:brightness-110 lg:pt-0'
         style={{
           backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
           backgroundSize: 'cover',
