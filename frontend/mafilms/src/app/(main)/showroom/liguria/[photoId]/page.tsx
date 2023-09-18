@@ -1,6 +1,5 @@
 import Carousel from '../../../../../components/gallery/Carousel';
 import cloudinary from '../../../../../utils/cloudinary';
-import { getCurrentPhoto } from '../../../../../utils/getCurrentPhoto';
 import type { Metadata, ResolvingMetadata, NextPage } from 'next';
 
 interface PhotoProps {
@@ -28,7 +27,11 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const photoId = params.photoId;
-  const currentPhoto = await getCurrentPhoto(photoId);
+  const response = await fetch(
+    `http://localhost:3000/api/cdn?folder=Liguria&photoId=${photoId}`
+  );
+  const currentPhoto = await response.json();
+
   const currentPhotoUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_2560/${currentPhoto.public_id}.${currentPhoto.format}`;
 
   return {
@@ -42,7 +45,10 @@ export async function generateMetadata(
 const Photo: NextPage<PhotoProps> = async ({ params }) => {
   const photoId = params.photoId;
   let index = Number(photoId);
-  const currentPhoto = await getCurrentPhoto(photoId);
+  const response = await fetch(
+    `http://localhost:3000/api/cdn?folder=Liguria&photoId=${photoId}`
+  );
+  const currentPhoto = await response.json();
 
   return (
     <>

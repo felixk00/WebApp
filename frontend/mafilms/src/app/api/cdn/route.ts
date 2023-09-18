@@ -4,11 +4,11 @@ import getBase64ImageUrl from '../../../utils/generateBlurPlaceholder';
 import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const folder = searchParams.get('folder');
+  const photoId = searchParams.get('photoId');
 
-  const {searchParams} = new URL(request.url)
-  const folder = searchParams.get("folder")
-
-  try { 
+  try {
     const results = await cloudinary.v2.search
       .expression(`folder:${folder}/*`)
       .sort_by('public_id', 'desc')
@@ -28,6 +28,20 @@ export async function GET(request: Request) {
       i++;
     }
 
+    // If there is a photoId, render the specific photo
+    if (photoId) {
+      const currentPhoto = reducedResults.find(
+        (img) => img.id === Number(photoId)
+      );
+      if (!currentPhoto) {
+        throw new Error('Photo not found');
+      }
+      currentPhoto.blurDataUrl = await getBase64ImageUrl(currentPhoto);
+
+      return NextResponse.json(currentPhoto);
+    }
+
+    // If not, render all
     const blurImagePromises = results.resources.map((image: ImageProps) => {
       return getBase64ImageUrl(image);
     });

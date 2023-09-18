@@ -82,7 +82,7 @@ export default function SharedModal({
                   style={{ objectFit: 'contain' }}
                   fill
                   priority
-                  alt='Next.js Conf image'
+                  alt='MA Films Shot'
                   onLoadingComplete={() => setLoaded(true)}
                   className='p-4 sm:p-8'
                 />
