@@ -5,7 +5,7 @@ import Gruppo from 'next/font/local';
 const gruppo = Gruppo({
   src: './Gruppo-Regular.ttf',
   display: 'swap',
-  preload: true,
+  preload: false,
 });
 
 export const metadata: Metadata = {
