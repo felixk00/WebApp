@@ -11,14 +11,25 @@ export default function Contact() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 my-10">
-      <h1 className="text-4xl font-bold leading-relaxed">Contact us</h1>
-      
-      <p className="text-1xl">If you want to get in touch just fill
-      out this form and we will look in to it. Give us <b>some details</b> about your request
-      in the <b>message field.</b> We are happy to answer your questions.</p>
-     
+      <h1 className="text-5xl font-bold leading-relaxed">Contact us</h1>
 
-      <ContactForm />
+      <p className="text-bold text-2xl">
+        MA Films
+      </p>
+
+      <p className="text-2xl">
+        76139 Karlsruhe
+      </p>
+      <p className="text-2xl">
+        xxxx
+      </p>
+      <br></br>
+      <div>
+        <ContactForm />
+      </div>
+
+
     </div>
+
   );
 }
