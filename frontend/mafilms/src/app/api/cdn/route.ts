@@ -3,10 +3,14 @@ import type { ImageProps } from '../../../utils/types';
 import getBase64ImageUrl from '../../../utils/generateBlurPlaceholder';
 import { NextResponse } from 'next/server';
 
-export async function GET() {
-  try {
+export async function GET(request: Request) {
+
+  const {searchParams} = new URL(request.url)
+  const folder = searchParams.get("folder")
+
+  try { 
     const results = await cloudinary.v2.search
-      .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
+      .expression(`folder:${folder}/*`)
       .sort_by('public_id', 'desc')
       .max_results(400)
       .execute();

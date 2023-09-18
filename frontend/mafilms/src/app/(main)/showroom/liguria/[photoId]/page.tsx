@@ -11,7 +11,7 @@ interface PhotoProps {
 
 export async function generateStaticParams() {
   const results = await cloudinary.v2.search
-    .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
+    .expression(`folder:Liguria/*`)
     .sort_by('public_id', 'desc')
     .max_results(400)
     .execute();

@@ -10,7 +10,7 @@ import { useLastViewedPhoto } from '../../../../utils/useLastViewedPhoto';
 import Modal from '../../../../components/gallery/Modal';
 
 export default async function Liguira() {
-  const response = await fetch('http://localhost:3000/api/cdn');
+  const response = await fetch('http://localhost:3000/api/cdn?folder=Liguria');
   const images = await response.json();
   return <Gallery images={images} />;
 }

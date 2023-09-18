@@ -1,6 +1,6 @@
 import { Dialog } from '@headlessui/react';
 import { motion } from 'framer-motion';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { useRef, useState } from 'react';
 import useKeypress from 'react-use-keypress';
 import type { ImageProps } from '../../utils/types';
@@ -21,9 +21,11 @@ export default function Modal({
 
   const [direction, setDirection] = useState(0);
   const [curIndex, setCurIndex] = useState(index);
+  const path = usePathname()
+  const previous = path.slice(0, path.lastIndexOf('/'));
 
   function handleClose() {
-    router.push('/showroom/liguria');
+    router.push(previous);
     onClose();
   }
 
@@ -34,7 +36,7 @@ export default function Modal({
       setDirection(-1);
     }
     setCurIndex(newVal);
-    router.push(`/showroom/liguria/${newVal}?photoId=${newVal}`);
+    router.push(`${previous}/${newVal}?photoId=${newVal}`);
   }
 
   useKeypress('ArrowRight', () => {
