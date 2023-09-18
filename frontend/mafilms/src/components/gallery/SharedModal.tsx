@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import {
   ArrowDownTrayIcon,
@@ -26,6 +26,7 @@ export default function SharedModal({
   navigation,
   currentPhoto,
   direction,
+  project,
 }: SharedModalProps) {
   const [loaded, setLoaded] = useState(false);
 
@@ -82,7 +83,7 @@ export default function SharedModal({
                   style={{ objectFit: 'contain' }}
                   fill
                   priority
-                  alt='MA Films Shot'
+                  alt={`MA Films, a shot from my ${project} project`}
                   onLoadingComplete={() => setLoaded(true)}
                   className='p-4 sm:p-8'
                 />

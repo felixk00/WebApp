@@ -21,8 +21,10 @@ export default function Modal({
 
   const [direction, setDirection] = useState(0);
   const [curIndex, setCurIndex] = useState(index);
-  const path = usePathname()
+  const path = usePathname();
   const previous = path.slice(0, path.lastIndexOf('/'));
+  const parts = path.split('/');
+  const project = parts[parts.indexOf('showroom') + 1];
 
   function handleClose() {
     router.push(previous);
@@ -74,6 +76,7 @@ export default function Modal({
         changePhotoId={changePhotoId}
         closeModal={handleClose}
         navigation={true}
+        project={project}
       />
     </Dialog>
   );

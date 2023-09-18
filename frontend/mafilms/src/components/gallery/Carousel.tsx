@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import useKeypress from 'react-use-keypress';
 import type { ImageProps } from '../../utils/types';
 import { useLastViewedPhoto } from '../../utils/useLastViewedPhoto';
@@ -16,6 +16,9 @@ export default function Carousel({
 }) {
   const router = useRouter();
   const [, setLastViewedPhoto] = useLastViewedPhoto();
+  const path = usePathname();
+  const parts = path.split('/');
+  const project = parts[parts.indexOf('showroom') + 1];
 
   function closeModal() {
     setLastViewedPhoto(currentPhoto.id);
@@ -50,6 +53,7 @@ export default function Carousel({
         currentPhoto={currentPhoto}
         closeModal={closeModal}
         navigation={false}
+        project={project}
       />
     </div>
   );
