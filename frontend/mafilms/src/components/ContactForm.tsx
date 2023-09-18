@@ -59,10 +59,7 @@ export default function ContactForm() {
         // After submission, set a session storage flag to indicate submission
         sessionStorage.setItem("formSubmitted", "true");
 
-        // Reset the flag after a delay
-        setTimeout(() => {
-            sessionStorage.removeItem("formSubmitted");
-        }, 60000); // Remove the flag after 60 seconds
+        
 
 
     }
@@ -75,6 +72,10 @@ export default function ContactForm() {
     return (
 
         <form onSubmit={handleSubmit}>
+
+            <h1 className="text-4xl font-bold leading-relaxed">Send us a Message</h1>
+
+
             <div className="w-full flex flex-col my-4 text-lg">
                 <label className="font-bold text-gray-800" htmlFor="name">
                     Name
@@ -84,7 +85,7 @@ export default function ContactForm() {
                     minLength={2}
                     maxLength={100}
                     required
-                    className=" p-4 bg-gray-50 border border-gray-100"
+                    className=" p-3 bg-gray-50 border border-gray-100 rounded-lg"
                     autoComplete="off"
                     id="name"
                 />
@@ -98,7 +99,7 @@ export default function ContactForm() {
                     minLength={5}
                     maxLength={150}
                     required
-                    className=" p-4 bg-gray-50 border border-gray-100"
+                    className=" p-3 bg-gray-50 border border-gray-100 rounded-lg"
                     autoComplete="off"
                     id="email" />
             </div>
@@ -113,7 +114,7 @@ export default function ContactForm() {
                     maxLength={500}
                     name="message"
                     placeholder="Leave us a Message"
-                    className="w-full p-4 bg-gray-50 border border-gray-100 text-lg">
+                    className="w-full p-3 bg-gray-50 border border-gray-100 text-lg rounded-lg">
                 </textarea>
 
             </div>
@@ -138,8 +139,9 @@ export default function ContactForm() {
 
             <button id="submitButton" type="submit"
                 disabled={loading || formSubmitted}
-                className="text-lg px-4 py-2 w-35 bg-black disabled:bg-gray-400 
-                disabled:text-gray-100 text text-white font-medium mt-3"
+                className="text-lg font-bold px-4 py-2 w-35 border border-black bg-black disabled:bg-white 
+                disabled:text-black text text-white font-medium mt-3 rounded-lg
+                transition hover:bg-white/10 hover:text-black"
             >{formSubmitted ? 'Form Submitted' : 'Send Message'}</button>
         </form>
     )
