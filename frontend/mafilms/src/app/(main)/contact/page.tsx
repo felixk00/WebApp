@@ -16,17 +16,19 @@ export default function Contact() {
       <p className="text-bold text-2xl">
         MA Films
       </p>
-
+      <p className="text-2xl">
+        Hauptstr. 5
+      </p>
       <p className="text-2xl">
         76139 Karlsruhe
       </p>
       <p className="text-2xl">
-        xxxx
+        Tel. 01237654654
       </p>
       <br></br>
-      <div>
-        <ContactForm />
-      </div>
+
+      <ContactForm />
+
 
 
     </div>
