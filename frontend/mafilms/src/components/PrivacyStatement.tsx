@@ -2,44 +2,79 @@
 export default function PrivacyStatement() {
 
     return (
-        <div className='mx-auto max-w-6xl px-4 my-10'>
-        <h1 className="text-5xl font-bold leading-relaxed">Datenschutzerklärung</h1>
-        <h1 className="text-4xl font-bold leading-relaxed">Allgemeiner Hinweis und Pflichtinformationen</h1>
+       
+            <div className="mx-auto flex max-w-7xl flex-col justify-between">
+                <h1 className="text-5xl font-bold leading-relaxed">Privacy Statement</h1>
+                <h1 className="text-4xl font-bold leading-relaxed">General notice and mandatory information</h1>
 
-<h1 className="text-3xl font-bold leading-relaxed">Benennung der verantwortlichen Stelle</h1>
-<p className="text-xl leading-relaxed">Die verantwortliche Stelle für die 
-Datenverarbeitung auf dieser Website ist:</p>
-<br></br>
-<p className="text-xl font-bold leading-relaxed">MA Films</p>
-<p className="text-lg">Melih Dihya</p>
-<p className="text-lg">Hauptstr. 5</p>
-<p className="text-lg">76139 Karlsruhe</p>
-<br></br>
-
-
-<p className="text-lg">Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
-<h1 className="text-3xl font-bold leading-relaxed">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h1>
-<p className="text-lg">Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der Datenverarbeitung möglich. Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
-<h1 className="text-3xl font-bold leading-relaxed">Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde</h1>
-<p className="text-lg">Als Betroffener steht Ihnen im Falle eines datenschutzrechtlichen Verstoßes ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde bezüglich datenschutzrechtlicher Fragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem sich der Sitz unseres Unternehmens befindet. Der folgende Link stellt eine Liste der Datenschutzbeauftragten sowie deren Kontaktdaten bereit: <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html" target="_blank">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p>
-<h1 className="text-3xl font-bold leading-relaxed">Recht auf Datenübertragbarkeit</h1>
-<p className="text-lg">Ihnen steht das Recht zu, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an Dritte aushändigen zu lassen. Die Bereitstellung erfolgt in einem maschinenlesbaren Format. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
-<h1 className="text-3xl font-bold leading-relaxed">Recht auf Auskunft, Berichtigung, Sperrung, Löschung</h1>
-<p className="text-lg">Sie haben jederzeit im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, Herkunft der Daten, deren Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Diesbezüglich und auch zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit über die im Impressum aufgeführten Kontaktmöglichkeiten an uns wenden.</p>
-<h1 className="text-3xl font-bold leading-relaxed">SSL- bzw. TLS-Verschlüsselung</h1>
-<p className="text-lg">Aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, die Sie an uns als Seitenbetreiber senden, nutzt unsere Website eine SSL-bzw. TLS-Verschlüsselung. Damit sind Daten, die Sie über diese Website übermitteln, für Dritte nicht mitlesbar. Sie erkennen eine verschlüsselte Verbindung an der „https://“ Adresszeile Ihres Browsers und am Schloss-Symbol in der Browserzeile.</p>
-
-<h1 className="text-3xl font-bold leading-relaxed">Kontaktformular</h1>
-<p className="text-lg">Per Kontaktformular übermittelte Daten werden einschließlich Ihrer Kontaktdaten gespeichert, um Ihre Anfrage bearbeiten zu können oder um für Anschlussfragen bereitzustehen. Eine Weitergabe dieser Daten findet ohne Ihre Einwilligung nicht statt.</p>
-<p className="text-lg">Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.</p>
-<p className="text-lg">Über das Kontaktformular übermittelte Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder keine Notwendigkeit der Datenspeicherung mehr besteht. Zwingende gesetzliche Bestimmungen - insbesondere Aufbewahrungsfristen - bleiben unberührt.</p>
+                <h1 className="text-3xl font-bold leading-relaxed">Responsiblity</h1>
+                <p className="text-xl leading-relaxed">The person responsible for data processing
+                    on this website is:</p>
+                <br></br>
+                <p className="text-xl font-bold leading-relaxed">MA Films</p>
+                <p className="text-lg">Melih Dihya</p>
+                <p className="text-lg">Hauptstr. 5</p>
+                <p className="text-lg">76139 Karlsruhe</p>
+                <br></br>
 
 
-<p className="text-lg"><small>Quelle: Datenschutz-Konfigurator von <a href="https://www.mein-datenschutzbeauftragter.de" target="_blank">Mein-Datenschutzbeauftragter.de</a></small></p>
+                <p className="text-lg">The responsible person decides alone or jointly
+                    with others on the purposes and means of processing personal
+                    data (e.g. names, contact details, etc.).</p>
+                <h1 className="text-3xl font-bold leading-relaxed">Revocation of your consent to data processing</h1>
+                <p className="text-lg">Some data processing operations are only possible with your express consent. You can
+                    revoke the consent you have already given at any time. An informal notification by email is sufficient to
+                    revoke your consent. The lawfulness of the data processing carried out until the revocation remains unaffected
+                    by the revocation.</p>
+                <h1 className="text-3xl font-bold leading-relaxed">Right to lodge a complaint with the relevant
+                    supervisory authority</h1>
+                <p className="text-lg">As a data subject, you are responsible in the event of a data protection violation
+                    a right to lodge a complaint with the responsible supervisory authority. Competent supervisory authority regarding
+                    Data protection issues are the responsibility of the state data protection officer of the federal state in which you are located
+                    the headquarters of our company is located. The following link provides a list of data protection officers
+                    as well as their contact details:<a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
+                        target="_blank">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p>
+                <h1 className="text-3xl font-bold leading-relaxed">Right to data portability</h1>
+                <p className="text-lg">You have the right to receive data that we collect based on your consent or
+                    Process it automatically in fulfillment of a contract, hand it over to yourself or to third parties
+                    let. It is provided in a machine-readable format. Unless you use the direct
+                    If you request the data to be transferred to another person responsible, this will only happen if you do so
+                    it is technically feasible.</p>
+                <h1 className="text-3xl font-bold leading-relaxed">Right to information, correction, blocking, deletion</h1>
+                <p className="text-lg">You have this at any time within the framework of the applicable legal provisions
+                    Right to free information about your stored personal data, origin of the
+                    Data, its recipients and the purpose of data processing and, if necessary, a right to correction or blocking
+                    or deletion of this data. In this regard and also on other questions on the subject of personal data
+                    You can contact us at any time using the contact options listed in the legal notice.</p>
+                <h1 className="text-3xl font-bold leading-relaxed">SSL or TLS encryption</h1>
+                <p className="text-lg">For security reasons and to protect the transmission of confidential content, the
+                    If you send it to us as the site operator, our website uses an SSL or TLS encryption. With it
+                    Data that you transmit via this website cannot be read by third parties. You recognize one
+                    encrypted connection at the “https://” address line of your browser and at the lock symbol in the browser line.</p>
+
+                <h1 className="text-3xl font-bold leading-relaxed">Contact Form</h1>
+                <p className="text-lg">Data transmitted via the contact form will include your contact details
+                    stored in order to be able to process your request or to be available for follow-up questions. One
+                    This data will not be passed on without your consent.</p>
+                <p className="text-lg">The data entered into the contact form is processed
+                    exclusively on the basis of your consent (Art. 6 Para. 1 lit. a GDPR). A revocation of your already
+                    consent given is possible at any time. An informal notification is sufficient for the revocation
+                    by email. The legality of the data processing operations carried out until the revocation remains
+                    Revocation is unaffected.</p>
+                <p className="text-lg">Data transmitted via the contact form will remain with us until you contact us
+                    request deletion, revoke your consent to storage or no need for it
+                    Data storage no longer exists. Mandatory legal provisions - in particular retention periods - remain unaffected.
+
+                </p>
 
 
-        </div>
-     
+                <p className="text-lg"><small>Source: Data protection configurator
+                    from <a href="https://www.mein-datenschutzbeauftragter.de"
+                        target="_blank">Mein-Datenschutzbeauftragter.de</a></small></p>
+
+
+            </div>
+    
     );
 
 
