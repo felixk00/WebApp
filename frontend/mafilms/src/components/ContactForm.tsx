@@ -132,7 +132,7 @@ export default function ContactForm() {
                         onChange={handlePrivacyToggle}
                     />
                     <label htmlFor="privacy" className="ml-2">
-                        I accept the privacy statement of MA Films
+                        I accept the <a href="/legalnotes/privacy/" className="text-red-700 underline">privacy statement</a> of MA Films
                     </label>
                 </div>
             </div>
