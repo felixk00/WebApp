@@ -13,6 +13,7 @@ export default function PrivacyStatement() {
                 <br></br>
                 <p className="text-xl font-bold leading-relaxed">MA Films</p>
                 <p className="text-lg">Melih Dihya</p>
+                <p className="text-lg">Felix Kienle</p>
                 <p className="text-lg">Hauptstr. 5</p>
                 <p className="text-lg">76139 Karlsruhe</p>
                 <br></br>

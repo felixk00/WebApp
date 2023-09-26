@@ -8,6 +8,7 @@ export default function ImprintComponent() {
             <br />
             <h1 className="text-2xl underline font-bold leading-relaxed">Information according to § 5 TMG:</h1>
             <p className="text-lg">Melih Dihya</p>
+            <p className="text-lg">Felix Kienle</p>
             <p className="text-lg">Hauptstr. 5</p>
             <p className="text-lg">76139 Karlsruhe</p>
             <br></br>
