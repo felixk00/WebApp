@@ -25,3 +25,47 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hideAnimation {
+  0% {
+    opacity: 1;
+    display: none;
+
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+
+
+.animate-typing1 {
+  animation-name: typing;
+  animation-duration: 1s; 
+  animation-timing-function: steps(15, end); 
+  white-space: nowrap; /* Prevents line breaks during animation */
+  overflow: hidden; /* Hides overflowing text */
+
+}
+
+.animate-typing2 {
+  animation-name: typing, hideAnimation;
+  animation-delay: 1s, 0s;
+  animation-duration: 1s, 1s; 
+  animation-timing-function: steps(15, end); 
+  white-space: nowrap; /* Prevents line breaks during animation */
+  overflow: hidden; /* Hides overflowing text */
+}
+
