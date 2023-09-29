@@ -45,14 +45,14 @@ const Footer = () => {
             All rights reserved.
           </p>
           <hr className='mx-4 hidden h-4 w-[1px] border-l border-neutral-400 sm:inline-block' />
-          <p>Designed in Karlsruhe</p>
+          <p>Designed in Pforzheim</p>
           <p className='sm:ml-auto'>
             Crafted by{' '}
             <a
               href='https://www.instagram.com/melihdihya_sw/'
               className='text-black dark:text-white'
             >
-              Melih Dihya
+              &nbsp;&nbsp;Melih Avci &nbsp;& &nbsp;Felix Kienle
             </a>
           </p>
         </div>
