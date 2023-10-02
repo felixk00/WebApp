@@ -2,7 +2,8 @@
 export default function PrivacyStatement() {
 
     return (
-       
+        <div className='mx-auto flex items-center justify-center p-4'>
+
             <div className="mx-auto flex max-w-7xl flex-col justify-between">
                 <h1 className="text-5xl font-bold leading-relaxed">Privacy Statement</h1>
                 <h1 className="text-4xl font-bold leading-relaxed">General notice and mandatory information</h1>
@@ -17,8 +18,6 @@ export default function PrivacyStatement() {
                 <p className="text-lg">Hauptstr. 5</p>
                 <p className="text-lg">76139 Karlsruhe</p>
                 <br></br>
-
-
                 <p className="text-lg">The responsible person decides alone or jointly
                     with others on the purposes and means of processing personal
                     data (e.g. names, contact details, etc.).</p>
@@ -32,9 +31,12 @@ export default function PrivacyStatement() {
                 <p className="text-lg">As a data subject, you are responsible in the event of a data protection violation
                     a right to lodge a complaint with the responsible supervisory authority. Competent supervisory authority regarding
                     Data protection issues are the responsibility of the state data protection officer of the federal state in which you are located
-                    the headquarters of our company is located. The following link provides a list of data protection officers
-                    as well as their contact details:<a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
-                        target="_blank">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p>
+                    the headquarters of our company is located.</p>
+                <p className="text-lg">
+                    The following link provides a list of data protection officers
+                    as well as their contact details:<a className="underline" href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
+                        target="_blank"> www.bfdi.bund.de</a>.
+                </p>
                 <h1 className="text-3xl font-bold leading-relaxed">Right to data portability</h1>
                 <p className="text-lg">You have the right to receive data that we collect based on your consent or
                     Process it automatically in fulfillment of a contract, hand it over to yourself or to third parties
@@ -73,9 +75,9 @@ export default function PrivacyStatement() {
                     from <a href="https://www.mein-datenschutzbeauftragter.de"
                         target="_blank">Mein-Datenschutzbeauftragter.de</a></small></p>
 
-
             </div>
-    
+        </div>
+
     );
 
 
