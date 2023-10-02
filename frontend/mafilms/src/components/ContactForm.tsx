@@ -77,7 +77,7 @@ export default function ContactForm() {
 
 
             <div className="w-full flex flex-col my-4 text-lg">
-                <label className="font-bold text-gray-800" htmlFor="name">
+                <label className="font-bold text-gray-800 dark:text-white" htmlFor="name">
                     Name
                 </label>
                 <input
@@ -85,13 +85,13 @@ export default function ContactForm() {
                     minLength={2}
                     maxLength={100}
                     required
-                    className=" p-3 bg-gray-50 border border-gray-100 rounded-lg"
+                    className=" p-3 bg-gray-50 border border-gray-100 text-lg text-black rounded-lg dark:bg-gray-200"
                     autoComplete="off"
                     id="name"
                 />
             </div>
             <div className="w-full flex flex-col my-4 text-lg">
-                <label className="font-bold text-gray-800" htmlFor="email">
+                <label className="font-bold text-gray-800 dark:text-white" htmlFor="email">
                     E-Mail
                 </label>
                 <input
@@ -99,12 +99,12 @@ export default function ContactForm() {
                     minLength={5}
                     maxLength={150}
                     required
-                    className=" p-3 bg-gray-50 border border-gray-100 rounded-lg"
+                    className=" p-3 bg-gray-50 border border-gray-100 text-lg text-black rounded-lg dark:bg-gray-200"
                     autoComplete="off"
                     id="email" />
             </div>
             <div>
-                <label className="font-bold text-gray-800 text-lg" htmlFor="message">
+                <label className="font-bold text-gray-800 text-lg dark:text-white" htmlFor="message">
                     Message
                 </label>
                 <textarea
@@ -114,7 +114,7 @@ export default function ContactForm() {
                     maxLength={500}
                     name="message"
                     placeholder="Leave us a Message"
-                    className="w-full p-3 bg-gray-50 border border-gray-100 text-lg rounded-lg">
+                    className="w-full p-3 bg-gray-50 border border-gray-100 text-lg text-black rounded-lg dark:bg-gray-200">
                 </textarea>
 
             </div>
@@ -141,7 +141,7 @@ export default function ContactForm() {
                 disabled={loading || formSubmitted}
                 className="text-lg font-bold px-4 py-2 w-35 border border-black bg-black disabled:bg-white 
                 disabled:text-black text text-white font-medium mt-3 rounded-lg
-                transition hover:bg-white/10 hover:text-black"
+                transition hover:bg-white/10 hover:text-black dark:bg-gray-600 hover:bg-white"
             >{formSubmitted ? 'Form Submitted' : 'Send Message'}</button>
         </form>
     )
