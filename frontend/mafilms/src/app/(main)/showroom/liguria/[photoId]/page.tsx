@@ -10,7 +10,7 @@ interface PhotoProps {
 
 export async function generateStaticParams() {
   const results = await cloudinary.v2.search
-    .expression(`folder:Liguria/*`)
+    .expression(`folder:Projects/Liguria/*`)
     .sort_by('public_id', 'desc')
     .max_results(400)
     .execute();
@@ -28,7 +28,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const photoId = params.photoId;
   const response = await fetch(
-    `http://localhost:3000/api/cdn?folder=Liguria&photoId=${photoId}`
+    `http://localhost:3000/api/cdn?folder=Projects/Liguria&photoId=${photoId}`
   );
   const currentPhoto = await response.json();
 
@@ -46,7 +46,7 @@ const Photo: NextPage<PhotoProps> = async ({ params }) => {
   const photoId = params.photoId;
   let index = Number(photoId);
   const response = await fetch(
-    `http://localhost:3000/api/cdn?folder=Liguria&photoId=${photoId}`
+    `http://localhost:3000/api/cdn?folder=Projects/Liguria&photoId=${photoId}`
   );
   const currentPhoto = await response.json();
 
