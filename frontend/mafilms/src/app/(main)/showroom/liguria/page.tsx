@@ -9,8 +9,12 @@ import type { ImageProps } from '../../../../utils/types';
 import { useLastViewedPhoto } from '../../../../utils/useLastViewedPhoto';
 import Modal from '../../../../components/gallery/Modal';
 
+const folderName = process.env.NEXT_PUBLIC_LIGURIA;
+
 export default async function Liguira() {
-  const response = await fetch('http://localhost:3000/api/cdn?folder=Projects/Liguria');
+  const response = await fetch(
+    `http://localhost:3000/api/cdn?folder=${folderName}`
+  );
   const images = await response.json();
   return <Gallery images={images} />;
 }
@@ -19,11 +23,9 @@ export function Gallery({ images }: { images: ImageProps[] }) {
   const searchParams = useSearchParams();
   const photoId = searchParams.get('photoId');
   const [lastViewedPhoto, setLastViewedPhoto] = useLastViewedPhoto();
-
   const lastViewedPhotoRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    // This effect keeps track of the last viewed photo in the modal to keep the index page in sync when the user navigates back
     if (lastViewedPhoto && !photoId) {
       lastViewedPhotoRef.current.scrollIntoView({ block: 'center' });
       setLastViewedPhoto(null);
@@ -48,7 +50,7 @@ export function Gallery({ images }: { images: ImageProps[] }) {
             description='Pictures from a small journey through the villages of Liguria.
                 Mountains and coasts full of charm.'
             showLogo={true}
-            backgroundImage='https://res.cloudinary.com/dmkjivzhf/image/upload/c_scale,w_720/v1693296275/Liguria/fjv0nnrdxjn9qyhk0urp.jpg'
+            backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${process.env.NEXT_PUBLIC_LIGURIA}/Cover/Cover.jpg`}
           />
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link
