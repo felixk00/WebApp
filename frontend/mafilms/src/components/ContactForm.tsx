@@ -85,6 +85,7 @@ export default function ContactForm() {
                     minLength={2}
                     maxLength={100}
                     required
+                    placeholder="Your name"
                     className=" p-3 bg-gray-50 border border-gray-100 text-lg text-black rounded-lg dark:bg-gray-200"
                     autoComplete="off"
                     id="name"
@@ -99,6 +100,7 @@ export default function ContactForm() {
                     minLength={5}
                     maxLength={150}
                     required
+                    placeholder="name@emailprovider.com"
                     className=" p-3 bg-gray-50 border border-gray-100 text-lg text-black rounded-lg dark:bg-gray-200"
                     autoComplete="off"
                     id="email" />
