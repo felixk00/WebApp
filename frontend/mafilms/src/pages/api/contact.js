@@ -38,8 +38,8 @@ export default async function ContactAPI(req, res) {
             <img src="cid:contactmafilms@gmail.com" height="100" width="100"/>
             <p></p>
             <b>MA Films</b>
-            <p>Hauptstr. 5</p>
-            <p>76139 Karlsruhe</p>
+            <p>Rainweg 3</p>
+            <p>75181 Pforzheim</p>
             <p>Melih Dihya</p>
             <p>Felix Kienle</p>
             `,

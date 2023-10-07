@@ -15,8 +15,8 @@ export default function PrivacyStatement() {
                 <p className="text-xl font-bold leading-relaxed">MA Films</p>
                 <p className="text-lg">Melih Dihya</p>
                 <p className="text-lg">Felix Kienle</p>
-                <p className="text-lg">Hauptstr. 5</p>
-                <p className="text-lg">76139 Karlsruhe</p>
+                <p className="text-lg">Rainweg 3</p>
+                <p className="text-lg">75181 Pforzheim</p>
                 <br></br>
                 <p className="text-lg">The responsible person decides alone or jointly
                     with others on the purposes and means of processing personal
