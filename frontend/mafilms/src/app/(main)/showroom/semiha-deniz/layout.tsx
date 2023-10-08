@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Melih Dihya - Project Liguria',
-  description: 'Photos from a trip to liguria',
+  title: 'Melih Dihya - Project Semiha & Deniz',
+  description: 'Moments of the wedding from Semiha & Deniz',
 };
 
 export default function PageLayout({

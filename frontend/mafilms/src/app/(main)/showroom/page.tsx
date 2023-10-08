@@ -18,26 +18,29 @@ export default function Showroom() {
             showLogo={true}
             backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${process.env.NEXT_PUBLIC_LIGURIA}/Cover/Cover.jpg`}
           />
+
           <ProjectCard
-            href='/showroom'
-            title='Placeholder'
-            description='Soon this will be the way to another project'
+            href='/showroom/roots'
+            title='Roots'
+            description='Rhythms of Our Lives'
             showLogo={false}
-            backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${process.env.NEXT_PUBLIC_LIGURIA}/Cover/Cover.jpg`}
+            backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${process.env.NEXT_PUBLIC_ROOTS}/Cover/Cover.jpg`}
           />
+
           <ProjectCard
-            href='/showroom'
-            title='Placeholder'
-            description='Soon this will be the way to another project'
+            href='/showroom/sunnya-stefan'
+            title='Sunnya & Stefan'
+            description='2023'
             showLogo={false}
-            backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${process.env.NEXT_PUBLIC_LIGURIA}/Cover/Cover.jpg`}
+            backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${process.env.NEXT_PUBLIC_SUNNYA_STEFAN}/Cover/Cover.jpg`}
           />
+
           <ProjectCard
-            href='/showroom'
-            title='Placeholder'
-            description='Soon this will be the way to another project'
+            href='/showroom/semiha-deniz'
+            title='Semiha & Deniz'
+            description='2023'
             showLogo={false}
-            backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${process.env.NEXT_PUBLIC_LIGURIA}/Cover/Cover.jpg`}
+            backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${process.env.NEXT_PUBLIC_SEMIHA_DENIZ}/Cover/Cover.jpg`}
           />
         </div>
       </div>

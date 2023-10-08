@@ -9,9 +9,9 @@ import type { ImageProps } from '../../../../utils/types';
 import { useLastViewedPhoto } from '../../../../utils/useLastViewedPhoto';
 import Modal from '../../../../components/gallery/Modal';
 
-const folderName = process.env.NEXT_PUBLIC_LIGURIA;
+const folderName = process.env.NEXT_PUBLIC_ROOTS;
 
-export default async function Liguira() {
+export default async function Roots() {
   const response = await fetch(
     `http://localhost:3000/api/cdn?folder=${folderName}`
   );
@@ -48,10 +48,9 @@ export function Gallery({ images }: { images: ImageProps[] }) {
         <div className='max-w-7xl columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4'>
           <ProjectCard
             href={`${previous}`}
-            title='Liguria 2023'
-            description='Pictures from a small journey through the villages of Liguria.
-                Mountains and coasts full of charm.'
-            showLogo={true}
+            title='Roots'
+            description='Rhythms of Our Lives'
+            showLogo={false}
             backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${folderName}/Cover/Cover.jpg`}
           />
           {images.map(({ id, public_id, format, blurDataUrl }) => (
@@ -81,7 +80,7 @@ export function Gallery({ images }: { images: ImageProps[] }) {
         </div>
       </div>
       <footer className='p-6 text-center text-white/80 sm:p-12'>
-        "Anyone who predicts the weather is a liar"
+        "Once, we appeared and set out on our path"
       </footer>
     </>
   );

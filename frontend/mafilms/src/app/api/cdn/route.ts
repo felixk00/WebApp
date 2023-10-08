@@ -5,12 +5,12 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const folder = searchParams.get('folder');
+  const folderName = searchParams.get('folder');
   const photoId = searchParams.get('photoId');
 
   try {
     const results = await cloudinary.v2.search
-      .expression(`folder:${folder}/*`)
+      .expression(`folder:${folderName}`)
       .sort_by('public_id', 'desc')
       .max_results(400)
       .execute();

@@ -2,10 +2,10 @@ import cloudinary from './cloudinary';
 
 let cachedResults;
 
-export default async function getResults(folder: string) {
+export default async function getResults(folderName: string) {
   if (!cachedResults) {
     const fetchedResults = await cloudinary.v2.search
-      .expression(`folder:${folder}/*`)
+      .expression(`folder:${folderName}`)
       .sort_by('public_id', 'desc')
       .max_results(400)
       .execute();

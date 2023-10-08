@@ -24,7 +24,7 @@ export default function Modal({
   const path = usePathname();
   const previous = path.slice(0, path.lastIndexOf('/'));
   const parts = path.split('/');
-  const project = parts[parts.indexOf('showroom') + 1];
+  const project = parts[parts.length - 2];
 
   function handleClose() {
     router.push(previous);
