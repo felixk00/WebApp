@@ -9,7 +9,7 @@ export default function Showroom() {
   return (
     <>
       <div className='mx-auto flex items-center justify-center p-4'>
-        <div className='grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
+        <div className='grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
           <ProjectCard
             href='/showroom/liguria'
             title='Liguria 2023'
