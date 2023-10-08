@@ -45,7 +45,7 @@ export function Gallery({ images }: { images: ImageProps[] }) {
             }}
           />
         )}
-        <div className='max-w-7xl columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4'>
+        <div className='max-w-7xl columns-1 gap-4 sm:columns-2 md:columns-3 xl:columns-4'>
           <ProjectCard
             href={`${previous}`}
             title='Semiha & Deniz'
