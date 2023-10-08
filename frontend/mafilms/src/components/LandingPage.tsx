@@ -29,9 +29,9 @@ export default function LandingPage() {
                         className="w-full h-auto rounded-lg"
 
                     />
-                    {/* Desktop button */}
+                    {/* Desktop button Zum Portfolio */}
                     <a
-                        id="desktopButton"
+                        id="desktopButtonPf"
                         className="absolute bottom-7 left-7 hidden md:inline-block 
                     text-center px-4 py-2 text-lg font-bold w-48 border border-white 
                     bg-white transition hover:bg-white/20 hover:text-white rounded-lg dark:text-black"
@@ -39,19 +39,20 @@ export default function LandingPage() {
                     >
                         Zum Portfolio
                     </a>
-
+                    {/* Desktop button About Us */}
                     <a
-                        id="desktopButton"
+                        id="desktopButtonAbout"
                         className="absolute bottom-7 left-60 hidden md:inline-block 
                     text-center text-white  px-4 py-2 text-lg font-bold w-48 hover:text-white hover:underline rounded-lg dark:text-black"
                         href="/about/"
                     >
                         About Us
                     </a>
+                    
 
-                    {/* Mobile and tablet button */}
+                    {/* Mobile and tablet button Zum Portfolio*/}
                     <a
-                        id="mobileButton"
+                        id="mobileButtonPf"
                         className="absolute bottom-4 left-4 md:hidden text-center px-4 py-2 
                     font-bold w-36 border border-white bg-white 
                     transition hover:bg-white/10 hover:text-white rounded-lg dark:text-black"
@@ -135,9 +136,9 @@ export default function LandingPage() {
             </div>
 
 
-           
 
-           
+
+
 
             <div className='mx-auto flex items-center justify-center p-4'>
                 <div className="mx-auto flex max-w-7xl flex-col justify-between relative pt-4">
