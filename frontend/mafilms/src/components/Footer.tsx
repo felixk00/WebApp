@@ -18,7 +18,7 @@ const Footer = () => {
           <h3 className='py-5 text-lg'>Capturing in a Place of No Mind</h3>
         </div>
 
-        <div className='flex flex-row space-x-10 md:text-lg'>
+        <div className='flex flex-row space-x-10'>
           <ul className='flex flex-col text-left tracking-tight md:tracking-tighter'>
             <h3 className='mb-2 font-bold '>MA Films</h3>
             <LinkList className='hover:underline' showRoute={true} />
