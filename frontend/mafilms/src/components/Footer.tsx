@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer className='text-neutral-500 dark:text-neutral-400'>
-      <div className='mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-neutral-200 px-4 py-12 dark:border-neutral-700 sm:flex-row sm:gap-12'>
+      <div className='mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 border-t border-neutral-200 px-4 py-12 dark:border-neutral-700 sm:flex-row sm:gap-12'>
         <div className='flex flex-col items-center'>
           <Link href='/'>
             <Logo />
@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
 
       <div className='border-t border-neutral-200 py-6 text-sm dark:border-neutral-700'>
-        <div className='mx-auto flex max-w-7xl flex-col items-center gap-1 px-4 sm:flex-row sm:gap-0'>
+        <div className='mx-auto flex max-w-5xl flex-col items-center gap-1 px-4 sm:flex-row sm:gap-0'>
           <p>
             &copy; {copyrightDate} {copyrightName}
             {copyrightName.length && !copyrightName.endsWith('.')
