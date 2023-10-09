@@ -1,6 +1,6 @@
 import { Dialog } from '@headlessui/react';
 import { motion } from 'framer-motion';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { useRef, useState } from 'react';
 import useKeypress from 'react-use-keypress';
 import type { ImageProps } from '../../utils/types';
@@ -15,16 +15,19 @@ export default function Modal({
 }) {
   let overlayRef = useRef();
   const router = useRouter();
-
-  const searchParams = useSearchParams()
-  const photoId = searchParams.get('photoId')
+  const searchParams = useSearchParams();
+  const photoId = searchParams.get('photoId');
   let index = Number(photoId);
 
   const [direction, setDirection] = useState(0);
   const [curIndex, setCurIndex] = useState(index);
+  const path = usePathname();
+  const previous = path.slice(0, path.lastIndexOf('/'));
+  const parts = path.split('/');
+  const project = parts[parts.length - 2];
 
   function handleClose() {
-    router.push('/showroom/liguria');
+    router.push(previous);
     onClose();
   }
 
@@ -35,8 +38,7 @@ export default function Modal({
       setDirection(-1);
     }
     setCurIndex(newVal);
-    router.push(`/showroom/liguria?photoId=${newVal}`
-    );
+    router.push(`${previous}/${newVal}?photoId=${newVal}`);
   }
 
   useKeypress('ArrowRight', () => {
@@ -74,6 +76,7 @@ export default function Modal({
         changePhotoId={changePhotoId}
         closeModal={handleClose}
         navigation={true}
+        project={project}
       />
     </Dialog>
   );

@@ -2,7 +2,7 @@ import Carousel from '../../../../../components/gallery/Carousel';
 import cloudinary from '../../../../../utils/cloudinary';
 import type { Metadata, ResolvingMetadata, NextPage } from 'next';
 
-const folderName = process.env.NEXT_PUBLIC_LIGURIA;
+const folderName = process.env.NEXT_PUBLIC_ROOTS;
 const metaDataTitle = 'A Photo by Melih Dihya';
 
 interface PhotoProps {

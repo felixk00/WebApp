@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer className='text-neutral-500 dark:text-neutral-400'>
-      <div className='mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-neutral-200 px-4 py-12 dark:border-neutral-700 sm:flex-row sm:gap-12'>
+      <div className='mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 border-t border-neutral-200 px-4 py-12 dark:border-neutral-700 sm:flex-row sm:gap-12'>
         <div className='flex flex-col items-center'>
           <Link href='/'>
             <Logo />
@@ -18,7 +18,7 @@ const Footer = () => {
           <h3 className='py-5 text-lg'>Capturing in a Place of No Mind</h3>
         </div>
 
-        <div className='flex flex-row space-x-10 md:text-lg'>
+        <div className='flex flex-row space-x-10'>
           <ul className='flex flex-col text-left tracking-tight md:tracking-tighter'>
             <h3 className='mb-2 font-bold '>MA Films</h3>
             <LinkList className='hover:underline' showRoute={true} />
@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
 
       <div className='border-t border-neutral-200 py-6 text-sm dark:border-neutral-700'>
-        <div className='mx-auto flex max-w-7xl flex-col items-center gap-1 px-4 sm:flex-row sm:gap-0'>
+        <div className='mx-auto flex max-w-5xl flex-col items-center gap-1 px-4 sm:flex-row sm:gap-0'>
           <p>
             &copy; {copyrightDate} {copyrightName}
             {copyrightName.length && !copyrightName.endsWith('.')
@@ -45,14 +45,14 @@ const Footer = () => {
             All rights reserved.
           </p>
           <hr className='mx-4 hidden h-4 w-[1px] border-l border-neutral-400 sm:inline-block' />
-          <p>Designed in Karlsruhe</p>
+          <p>Designed in Pforzheim</p>
           <p className='sm:ml-auto'>
             Crafted by{' '}
             <a
               href='https://www.instagram.com/melihdihya_sw/'
               className='text-black dark:text-white'
             >
-              Melih Dihya
+              &nbsp;&nbsp;Melih Avci &nbsp;& &nbsp;Felix Kienle
             </a>
           </p>
         </div>

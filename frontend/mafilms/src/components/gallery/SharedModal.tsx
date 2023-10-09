@@ -1,3 +1,5 @@
+'use client';
+
 import {
   ArrowDownTrayIcon,
   ArrowTopRightOnSquareIcon,
@@ -24,6 +26,7 @@ export default function SharedModal({
   navigation,
   currentPhoto,
   direction,
+  project,
 }: SharedModalProps) {
   const [loaded, setLoaded] = useState(false);
 
@@ -55,7 +58,7 @@ export default function SharedModal({
       }}
     >
       <div
-        className='wide:h-full xl:taller-than-854:h-auto relative z-50 flex aspect-[2/3] w-full max-w-7xl items-center sm:aspect-[3/2]'
+        className='wide:h-full xl:taller-than-854:h-auto relative z-50 flex aspect-[2/3] w-full max-w-5xl items-center sm:aspect-[3/2]'
         {...handlers}
       >
         {/* Main image */}
@@ -77,10 +80,10 @@ export default function SharedModal({
                   }/image/upload/c_scale,${navigation ? 'w_1280' : 'w_1920'}/${
                     currentImage.public_id
                   }.${currentImage.format}`}
-                  objectFit='contain'
+                  style={{ objectFit: 'contain' }}
                   fill
                   priority
-                  alt='Next.js Conf image'
+                  alt={`MA Films, a shot from my ${project} project`}
                   onLoadingComplete={() => setLoaded(true)}
                   className='p-4 sm:p-8'
                 />
@@ -90,7 +93,7 @@ export default function SharedModal({
         </div>
 
         {/* Buttons + bottom nav bar */}
-        <div className='absolute inset-0 mx-auto flex max-w-7xl items-center justify-center'>
+        <div className='absolute inset-0 mx-auto flex max-w-5xl items-center justify-center'>
           {/* Buttons */}
           {loaded && (
             <div className='relative aspect-[2/3] max-h-full w-full sm:aspect-[3/2]'>

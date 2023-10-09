@@ -20,7 +20,7 @@ const CurrentRoute = ({ className = '' }: RouteProps) => {
     <>
       {currentRoute && (
         <span className={`${className}`}>
-          {routeDisplayNames?.[currentRoute] || 'Unknown'}
+          {routeDisplayNames?.[currentRoute] || ''}
         </span>
       )}
     </>
