@@ -48,9 +48,8 @@ export function Gallery({ images }: { images: ImageProps[] }) {
         <div className='max-w-4xl columns-1 gap-4 sm:columns-2 lg:columns-3'>
           <ProjectCard
             href={`${previous}`}
-            title='Liguria 2023'
-            description='Pictures from a small journey through the villages of Liguria.
-                Mountains and coasts full of charm.'
+            title='Liguria'
+            description='Along the Italian Riviera'
             showLogo={true}
             backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${folderName}/Cover/Cover.jpg`}
           />
