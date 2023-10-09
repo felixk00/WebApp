@@ -45,20 +45,18 @@ const Navbar = () => {
     <div
       className={`${border} ${styles.navbar} fixed left-0 top-0 z-10 w-full text-neutral-600 transition-all dark:text-neutral-300`}
     >
-      <div className='m-auto flex max-w-7xl items-center justify-between px-4 py-1'>
+      <div className='m-auto flex max-w-5xl items-center justify-between px-4 py-1'>
         <Link href='/'>
-          <Logo />
+          <Logo height={50} width={50} />
         </Link>
 
         {/* Desktop Navigation */}
         <ul className='hidden sm:flex'>
-          <LinkList
-            className='px-4 text-lg hover:text-gray-500'
-            showRoute={true}
-          />
+          <LinkList className='px-4 hover:text-gray-500' showRoute={true} />
         </ul>
 
-        <CurrentRoute className='absolute left-1/2 block -translate-x-1/2 text-2xl text-red-700 sm:hidden' />
+        {/* Mobile Current Route */}
+        <CurrentRoute className='absolute left-1/2 block -translate-x-1/2 text-xl text-red-700 sm:hidden' />
 
         {/* Mobile Button */}
         <div onClick={handleNav} className='z-10 block sm:hidden'>
@@ -77,7 +75,7 @@ const Navbar = () => {
 
           <ul className='mb-14 flex flex-col'>
             <LinkList
-              className='p-4 text-4xl hover:text-gray-500 '
+              className='p-4 text-2xl hover:text-gray-500 '
               showRoute={true}
               functionData={{ handler: handleNav, state: nav }}
             />

@@ -34,7 +34,7 @@ const LinkList = ({
 
   const Links: LinkItem[] = [
     { label: 'Instagram', href: 'https://www.instagram.com/melihdihya_sw/' },
-    { label: 'YouTube', href: '/' },
+    { label: 'Behance', href: 'https://www.behance.net/melihdihya' },
     { label: 'Imprint', href: '/legalnotes/imprint' },
     { label: 'Privacy', href: '/legalnotes/privacy' },
   ];

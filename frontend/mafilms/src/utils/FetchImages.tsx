@@ -2,9 +2,9 @@ import cloudinary from './cloudinary';
 import type { ImageProps } from './types';
 import getBase64ImageUrl from './generateBlurPlaceholder';
 
-export async function FetchImages() {
+export async function FetchImages(folderName: string) {
   const results = await cloudinary.v2.search
-    .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
+    .expression(`folder:${folderName}`)
     .sort_by('public_id', 'desc')
     .max_results(400)
     .execute();

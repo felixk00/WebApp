@@ -8,8 +8,8 @@ type LogoProps = {
 };
 
 const Logo = ({
-  width = 70,
-  height = 20,
+  width = 65,
+  height = 65,
   glow = false,
   logoFile = 'MA_FILMS_Logo_2.2_Raw.svg',
 }: LogoProps) => {

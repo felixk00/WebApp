@@ -9,9 +9,9 @@ import type { ImageProps } from '../../../../utils/types';
 import { useLastViewedPhoto } from '../../../../utils/useLastViewedPhoto';
 import Modal from '../../../../components/gallery/Modal';
 
-const folderName = process.env.NEXT_PUBLIC_LIGURIA;
+const folderName = process.env.NEXT_PUBLIC_SEMIHA_DENIZ;
 
-export default async function Liguira() {
+export default async function SemihaDeniz() {
   const response = await fetch(
     `http://localhost:3000/api/cdn?folder=${folderName}`
   );
@@ -48,9 +48,9 @@ export function Gallery({ images }: { images: ImageProps[] }) {
         <div className='max-w-4xl columns-1 gap-4 sm:columns-2 lg:columns-3'>
           <ProjectCard
             href={`${previous}`}
-            title='Liguria'
-            description='Along the Italian Riviera'
-            showLogo={true}
+            title='Semiha & Deniz'
+            description='2023'
+            showLogo={false}
             backgroundImage={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${folderName}/Cover/Cover.jpg`}
           />
           {images.map(({ id, public_id, format, blurDataUrl }) => (
@@ -80,7 +80,8 @@ export function Gallery({ images }: { images: ImageProps[] }) {
         </div>
       </div>
       <footer className='p-6 text-center text-white/80 sm:p-12'>
-        "Anyone who predicts the weather is a liar"
+        "When love is the artist, even the canvas of adversity becomes a
+        masterpiece."
       </footer>
     </>
   );
