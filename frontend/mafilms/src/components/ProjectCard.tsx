@@ -27,7 +27,6 @@ export default function ProjectCard({
         }}
       >
         <div className='absolute inset-0 flex items-center justify-center opacity-20'>
-          <span className='flex max-h-full max-w-full items-center justify-center'></span>
           <span className='absolute bottom-0 left-0 right-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black'></span>
         </div>
         {showLogo && <Logo />}
